@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    background-color:#EBE691;
+    overflow:hidden;
+}
+   
+
+.text{
+    font-family: Poppins,sans-serif;
+    font-size:8rem;
+    margin-left: 2rem;
+    font-weight:bold;
+    margin-top:12rem;
+}
+
+.green{
+    color:#268540;
+}
+
+.black{
+    color: black;
+}
+
+.tagline{
+    font-family:Poppins,sans-serif;
+    font-size:3.6rem;
+    margin-left:3rem;
+}
+
+.button1,.button2{
+    background-color:#D5AF2F;
+    color:black;
+    padding:1rem;
+    width:10%;
+    border-radius:2rem;
+    font-size:1.4rem;
+    border:none;
+    font-family: Poppins,sans-serif;
+    font-weight:bold;
+}
+
+.button1{
+    margin-left:8rem;
+    margin-top:4rem;
+    margin-right: 3rem;
+}
+
+.illustration{
+    margin-left:2rem;
+    display:block;
+    transform:translate(10%,-70%);
+    width:90%;
+}
+
+@media screen and (max-width:1300px)
+{
+    .text{
+        margin-top:8rem;
+        margin-left:0rem;
+        font-size:5.8rem;
+        text-align: center;
+    }
+    .tagline{
+        text-align: center;
+        margin:auto;
+    }
+
+
+    .button1, .button2{
+        width:50%;
+        margin-left:25%;
+        font-size:1rem;
+        font-weight:bold;
+    }
+
+    .button2{
+        margin-top:2rem;
+    }
+
+    .illustration{
+        display:none;
+    }
+}
+
+
+@media screen and (max-width:360px)
+{
+    .text{
+        margin-top:8rem;
+        font-size:5.8rem;
+        text-align:center;
+    }
+
+    .tagline{
+        text-align:center;
+        margin-left:25%;
+    }
+
+    .button1,.button2{
+        width:50%;
+        margin-left:40%;
+        font-size:1.4rem;
+        font-weight: bold;
+    }
+}
+
+
+@media screen and (max-width:414px)
+{
+    .text{
+        margin-top:8rem;
+        font-size:5.8rem;
+        text-align:center;
+    }
+
+    .tagline{
+        text-align:center;
+        margin-left:25%;
+    }
+
+    .button1,.button2{
+        width:50%;
+        margin-left:38%;
+        font-size:1.5rem;
+        font-weight:bold;
+    }
+}
