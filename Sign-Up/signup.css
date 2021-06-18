@@ -1,0 +1,205 @@
+@font-face{
+    font-family: "Gilroy Semi-Bold";
+    src: url("Gilroy-SemiBold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy Semi-Bold", sans-serif;
+    color: black;
+}
+
+body{
+    background-color: #EBE691;
+    overflow: hidden;
+}
+
+main{
+    margin: auto;
+    padding: 0 30px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.signup-illus{
+    width: 80%;
+    transform: translateY(40px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-sec{
+    min-width: 40%;
+    background: rgba( 145, 113, 100, 0.30 );
+    box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 100px;
+    align-items: center;
+    min-height: 85%;
+    transform: translateY(35px);
+    padding: 40px;
+}
+
+.email,
+.username,
+.password,
+.confpssd{
+    padding: 10px;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0;
+}
+
+input[type=email],
+input[type=password],
+input[type=text]{
+    background-color: rgba(255, 255, 255, 0.60);
+    color: black;
+    align-items: center;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 80%;
+}
+
+.b1{
+    margin: auto;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.10 );
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    background: #4E9C64;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    width: 55%;
+}
+
+.b1:hover{
+    transform: scale(1.05);
+    transition: transform .2s;
+}
+
+::placeholder{
+    font-weight: 900;
+    color: black;
+}
+
+@media (max-width: 750px){
+    .signup-illus{
+        display: none;
+    }
+    .right-sec{
+        width: 100%;
+    }
+    main{
+        padding: 50px;
+    }
+}
+
+@media (width: 360px) and (height: 640px){
+    .signup-illus{
+        display: none;
+    }
+    .right-sec{
+        height: 120%;
+        padding: 0 40px 0;
+    }
+    main{
+        padding: 40px;
+    }
+}
+
+@media (width: 320px) and (height: 568px){
+    .signup-illus{
+        display: none;
+    }
+    .right-sec{
+        height: 130%;
+        padding: 10px;
+    }
+    main{
+        padding: 37px;
+    }
+    .b1{
+        transform: translateY(-30%);
+        margin-top: 0px;
+    }
+}
+
+@media (width: 375px) and (height: 812px){
+    .signup-illus{
+        display: none;
+    }
+    .right-sec{
+        height: 120%;
+        padding: 20px;
+    }
+    main{
+        padding: 70px;
+    }
+    .b1{
+        margin-top: 15px;
+    }
+}
+
+@media (width: 768px) and (height: 1024px){
+    .right-sec{
+        width: 100%;
+        background: rgba( 145, 113, 100, 0.30 );
+        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
+        backdrop-filter: blur( 3.0px );
+        -webkit-backdrop-filter: blur( 3.0px );
+        border-radius: 100px;
+        align-items: center;
+        transform: translateY(35px);
+        padding: 30px;
+        height: 50%;
+    }
+    main{
+        padding: 30px;
+    }
+    .b1{
+        margin-top: 18px;
+        width: 60%;
+    }
+}
+
+@media (width: 1024px) and (height: 1366px){
+    .right-sec{
+        width: 100%;
+        background: rgba( 145, 113, 100, 0.30 );
+        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
+        backdrop-filter: blur( 3.0px );
+        -webkit-backdrop-filter: blur( 3.0px );
+        border-radius: 100px;
+        align-items: center;
+        transform: translateY(35px);
+        padding: 30px;
+        height: 50%;
+    }
+    main{
+        padding: 30px;
+    }
+    .b1{
+        margin-top: 18px;
+        width: 60%;
+    }
+}
+
+/*devices to be fixed- iPhone 6/7/8, iPad, iPad Pro, Galaxy Fold*/
