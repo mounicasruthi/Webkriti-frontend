@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Light.otf");
+  src: url("../assets/fonts/Gilroy-Light.otf");
 }
 
 @font-face {
   font-family: "Gilroy Dark";
-  src: url("Gilroy-ExtraBold.otf");
+  src: url("../assets/fonts/Gilroy-ExtraBold.otf");
 }
 
 nav {
@@ -23,6 +23,7 @@ nav {
   top: 0;
   width: 100%;
   height: 70px;
+  z-index: 2;
 }
 
 .image1,
@@ -155,24 +156,17 @@ body {
 }
 
 .profilePic {
-  position:fixed;
-  /* min-width: 15%;
-  min-height: 90%; */
-  /* max-width: 15%;
-  max-height: 21%;
-  width: 15%;
-  height: 21%; */
   width: 135px;
-  height: 135px;
-  left: 0%;
+  height: 135px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(280%, 50%);
+  transform: translateY( 50%);
   background-color: #c4c4c4;
   border-radius: 100%;
   border: 1px solid #000;
   color: #000;
+  margin: auto;
 }
 
 .card2 {
@@ -267,9 +261,16 @@ body {
     padding-right: 10px;
     display: block;
   }
+  #search {
+    float: right;
+    margin-left: 30px;
+    
+    width: 200px;
+    margin-top: 20px;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 502px) {
   .logo {
     display: none;
   }
@@ -277,7 +278,7 @@ body {
   #search {
     float: left;
     margin-left: 30px;
-    width: 200px;
+    width: 150px;
     margin-top: 20px;
   }
 
@@ -294,4 +295,7 @@ body {
   .sidenav a {
     font-size: 18px;
   }
+
+ 
 }
+

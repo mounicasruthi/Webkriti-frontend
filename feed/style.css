@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("Gilroy-Light.otf");
+  src: url("../assets/fonts/Gilroy-Light.otf");
 }
 
 @font-face {
   font-family: "Gilroy Dark";
-  src: url("Gilroy-ExtraBold.otf");
+  src: url("../assets/fonts/Gilroy-ExtraBold.otf");
 }
 
 nav {
@@ -23,6 +23,7 @@ nav {
   top: 0;
   width: 100%;
   height: 70px;
+  z-index: 2;
 }
 
 .image1,
@@ -123,16 +124,23 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: #c4c4c4;
+  /* background-color: #c4c4c4; */
   /* mix-blend-mode: luminosity; */
-    opacity: 0.5;    
+    /* opacity: 0.5;     */
   transform: translate(20%, 0%); 
+
+  background: rgba(196, 196, 196, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .card {
   width: 98%;
   height: 280px;
-  background-color: #ffffff;
+  background-color: #dad8d8;
   border-radius: 20px;
 
   border: 1px solid #000;
@@ -147,7 +155,7 @@ body {
 .card2 {
   width: 98%;
   height: 280px;
-  background-color: #ffffff;
+  background-color: #dad8d8;
   border-radius: 20px;
   border: 1px solid #000;
   color: #000;
@@ -155,7 +163,7 @@ body {
 .card3 {
   width: 98%;
   height: 280px;
-  background-color: #ffffff;
+  background-color: #dad8d8;
   border-radius: 20px;
   border: 1px solid #000;
   color: #000;
@@ -200,15 +208,6 @@ body {
   margin-left: 50px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
 @media (max-width: 1100px) {
   nav ul {
     position: fixed;
@@ -231,9 +230,17 @@ body {
     padding-right: 10px;
     display: block;
   }
+
+  #search {
+    float: right;
+    margin-left: 30px;
+    
+    width: 200px;
+    margin-top: 20px;
+  }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 502px) {
   .logo {
     display: none;
   }
@@ -243,5 +250,15 @@ body {
     margin-left: 30px;
     width: 200px;
     margin-top: 20px;
+  }
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
   }
 }
