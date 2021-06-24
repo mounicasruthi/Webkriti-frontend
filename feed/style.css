@@ -240,7 +240,7 @@ body {
   }
 }
 
-@media screen and (max-width: 502px) {
+@media screen and (max-width: 550px) {
   .logo {
     display: none;
   }
