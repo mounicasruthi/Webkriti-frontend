@@ -1,0 +1,240 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh;
+    background-color:#EBE691;
+    overflow:hidden;
+}
+   
+
+.text{
+    font-family: Poppins,sans-serif;
+    font-size:8rem;
+    margin-left: 2rem;
+    font-weight:bold;
+    margin-top:12rem;
+}
+
+.green{
+    color:#268540;
+}
+
+.black{
+    color: black;
+}
+
+.tagline{
+    font-family:Poppins,sans-serif;
+    font-size:3.6rem;
+    margin-left:3rem;
+}
+
+.button1,.button2{
+    background-color:#D5AF2F;
+    color:black;
+    padding:1rem;
+    width:10%;
+    border-radius:2rem;
+    font-size:1.4rem;
+    border:none;
+    font-family: Poppins,sans-serif;
+    font-weight:bold;
+}
+
+.button1{
+    margin-left:8rem;
+    margin-top:4rem;
+    margin-right: 3rem;
+}
+
+.illustration{
+    margin-left:2rem;
+    display:block;
+    transform:translate(10%,-70%);
+    width:90%;
+}
+
+
+@media screen and (max-width:1300px)
+{
+    .text{
+        margin-top:8rem;
+        margin-left:0rem;
+        font-size:5.8rem;
+        text-align: center;
+    }
+
+    .tagline{
+        text-align: center;
+        margin-left:auto;
+        margin-top:1rem;
+    }
+
+
+    .button1, .button2{
+        width:50%;
+        margin-left:25%;
+        font-size:1.5rem;
+        font-weight:bold;
+    }
+
+    .button2{
+        margin-top:2rem;
+    }
+    
+
+    .illustration{
+        display:none;
+    }
+}
+
+
+@media screen and (max-width:360px)
+{
+    .text{
+        margin-top:8rem;
+        font-size:5.8rem;
+        text-align:center;
+    }
+
+    .tagline{
+        text-align:center;
+        margin-top:1rem;
+        margin-left:30%;
+    }
+
+    .button1,.button2{
+        width:50%;
+        margin-left:40%;
+        font-size:1.5rem;
+        font-weight:bold;
+    }
+}
+
+
+@media screen and (width:412px)
+{
+    .text{
+        margin-top:8rem;
+        font-size:5.8rem;
+        text-align:center;
+    }
+
+    .tagline{
+        text-align:center;
+        margin-top:1rem;
+        margin-left:20%;
+    }
+
+    .button1,.button2{
+        width:50%;
+        margin-left:35%;
+        font-size:1.5rem;
+        font-weight:bold;
+    }
+
+}
+
+@media screen and (width:600px)
+{
+    .tagline{
+        margin-left:auto;
+        margin-top:1rem;
+    }
+
+    .button1, .button2{
+        width:50%;
+        margin-left:25%;
+        font-size:1.5rem;
+        font-weight: bold;
+    }
+
+    .button1{
+        margin-top:4rem;
+    }
+}
+
+@media screen and (width:320px)
+{
+    .tagline{
+        text-align:center;
+        margin-left:4rem;
+        margin-right:-5rem;
+    }
+
+    .button1,.button2{
+        width:50%;
+        margin-left:50%;
+    }
+}
+
+@media screen and (width:768px)
+{
+    .tagline{
+        text-align:center;
+        margin-left:auto;
+        font-size:4rem;
+    }
+
+    .button1,.button2{
+        margin-left:25%;
+        font-size:2rem;
+    }
+
+    .button1{
+        margin-top:4rem;
+        margin-bottom:1rem;
+    }
+}
+
+@media screen and (width:540px)
+{
+    .tagline{
+        margin:auto;
+    }
+
+    .button1,.button2{
+        margin-left:25%;
+    }
+}
+
+@media screen and (width:1024px)
+{
+    .text{
+        font-size:10rem;
+    }
+
+    
+    .tagline{
+        font-size:6rem;
+        text-align:center;
+        margin:auto;
+    }
+
+    .button1,.button2{
+        margin-left:25%;
+        font-size:2rem;
+    }
+  
+    .button1{
+        margin-top:5rem;
+        margin-bottom:1rem;
+    }
+}
+
+@media screen and (width:280px)
+{
+    .tagline{
+        text-align: center;
+        margin-left:2rem;
+        margin-right:-10rem;
+    }
+    .button1,.button2{
+        width:100%;
+        margin-left:40%;
+    }
+}
