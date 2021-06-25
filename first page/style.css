@@ -1,0 +1,191 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face
+{
+    font-family: "Handlee";
+    src:url("../assets/font.ttf");
+}
+
+
+body
+{
+    background-image:url("../assets/background.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    background-attachment: fixed;
+    padding:4rem;
+    overflow:hidden;
+    height:100vh;
+}
+
+
+
+.one
+{
+    text-align:right;
+    margin-right:.5rem;
+    font-family:'Handlee';
+    padding:.5rem;
+    margin-top:3rem;
+    margin-left: auto;
+    font-size:4rem ;
+}
+
+.two
+{
+    text-align:right;
+    margin-left:auto;
+    font-size:4rem;
+    padding:.5rem;
+    font-family:'Handlee';
+    margin-right:.5rem;
+    margin-bottom:.2rem;
+}
+
+
+.responsive
+{
+    height:34rem;
+    margin-top:-10%; 
+    /*min-height:20rem;*/
+    margin-right: auto;
+    margin-bottom:0%;
+}
+
+
+@media screen and (max-width:1024px)
+{
+    body{
+        padding:0.2rem;
+    }
+
+
+    .one{
+        margin-top:1rem;
+        text-align: center;
+        margin-right:0rem
+    }
+
+    .two{
+        text-align: center;
+        margin-top:auto;
+        padding-top:1rem;
+    }
+
+    .responsive{
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:auto;
+        height:auto;
+        width:80%;
+    }
+}
+
+
+
+@media screen and (max-width:412px)
+{
+    body{
+        padding:0;
+    }
+
+
+    .one{
+        text-align:center;
+        font-size: 3rem;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:2rem;
+    }
+
+    .two{
+        font-size: 3rem;
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .responsive{
+        margin-left:auto;
+        margin-right:auto;
+        height:16rem;
+        width:80%;
+        margin-top:auto;
+    }
+}
+
+
+
+@media screen and (min-height:1200px)
+{ 
+    .one{
+        margin-top:4rem;
+        font-size:6rem;
+        text-align:center;
+    }
+
+    .two{
+        text-align: center;
+        font-size:6rem;
+    }
+
+
+    .responsive{
+        margin-top:1rem;
+        margin-left:auto;
+        margin-right:auto;
+        height:70%;
+        width:90%;
+    }
+}
+
+
+@media screen and (width:412px),(height:732px)
+{
+    .responsive{
+    height:22rem;
+    margin-bottom:-4rem;
+    }
+}
+
+@media screen and (width:600px),(height:960px)
+{
+    .one{
+        margin-top:3rem;
+    }
+
+
+    .responsive{
+        margin-top:2rem;
+        height:30rem;
+        width:90%;
+    }
+}
+
+@media screen and (width:414px), (height:736px)
+{
+    .one{
+        font-size:3rem;
+        margin-top:2rem;
+        text-align: center;
+    }
+
+    .two{
+        font-size:3rem;
+        margin-top:1rem;
+        text-align: center;
+    }
+
+    .responsive{
+        height:26rem;
+        width:80%;
+    }
+}
+
