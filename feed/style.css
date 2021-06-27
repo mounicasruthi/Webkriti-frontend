@@ -137,7 +137,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.card {
+.card-main {
   width: 98%;
   height: 280px;
   background-color: #dad8d8;
@@ -148,9 +148,53 @@ body {
   /* padding: 20px; */
 
   display: flex;
-  /* flex-direction: column;
-    align-items: center; */
+  flex-direction: column;
+    align-items: center;
 }
+
+/* .card-header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: flex;
+    padding: 16px;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #fff;
+}
+
+.card-pfp {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  display: block;
+}
+
+.card-date {
+flex: 1 1 auto;
+display: block;
+}
+
+.card-body {
+  padding: 16px 0px;
+    background-color: rgb(216, 69, 69);
+    display: block;
+}
+ .card-caption {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+ }
+
+ .card-picture {
+  padding: 8px;
+  text-align: center;
+  background-color: #f2f5f4;
+  display: block;
+ }
+
+
+*/
 
 .card2 {
   width: 98%;

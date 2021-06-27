@@ -16,6 +16,11 @@
   src: url("../assets/fonts/Gilroy-ExtraBold.otf");
 }
 
+@font-face {
+  font-family: "Gilroy Semi-Bold";
+  src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
 nav {
   padding: 0px;
   background: #e5e5e5;
@@ -141,11 +146,17 @@ body {
   height: 125px;
 }
 
-.card {
+.card-main {
   width: 100%;
   height: 150px;
-  background-color: #dad8d8;
-
+  /* background-color: #dad8d8; */
+  /* background: #fd746c; 
+  background: -webkit-linear-gradient(to right, #ff9068, #fd746c); 
+  background: linear-gradient(to right, #ff9068, #fd746c);  */
+  background-image: url(../assets/images/coverpic.jpg);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
   border-bottom: 1px solid #000;
   color: #000;
 }
@@ -153,6 +164,11 @@ body {
 .name,
 .bio {
   color: #000;
+}
+
+.name {
+  font-family: "Gilroy Semi-Bold";
+  font-size: 18px;
 }
 
 .profilePic {
@@ -169,26 +185,35 @@ body {
   margin: auto;
 }
 
+.pfpImg {
+  border-radius: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+
 .card2 {
   width: 30%;
   height: 40px;
-
-  background-color: #dad8d8;
+   background-color: #dad8d8; 
   border-radius: 20px;
   border: 1px solid #000;
   color: #000;
   margin-top: 50px;
   padding: 9px 20px 0px;
+    text-align: center;
 }
 .card3 {
   width: 50%;
-  height: 80px;
-
+  /* height: 80px; */
+height: auto;
+padding: 10px;
   background-color: #dad8d8;
   border-radius: 20px;
   border: 1px solid #000;
   color: #000;
-  padding: 9px 20px 0px;
+  /* padding: 9px 20px 0px; */
 }
 
 .card4 {
@@ -268,6 +293,16 @@ body {
     width: 200px;
     margin-top: 20px;
   }
+
+  .card2, .card3 {
+    width: auto;
+    height: auto;
+     padding: 10px; 
+    margin-left: 15px;
+    margin-right: 15px;
+  
+  }
+  
 }
 
 @media screen and (max-width: 550px) {
@@ -284,18 +319,22 @@ body {
 
   .card2,
   .card3 {
-    padding: 9px 10px 0px;
+     padding: 10px; 
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
 
- 
+
+@media screen and (max-width: 400px)
+{
+  
+  #search {
+    float: left;
+    margin-left: 30px;
+    width: 150px;
+    margin-top: 20px;
+  }
 }
-
