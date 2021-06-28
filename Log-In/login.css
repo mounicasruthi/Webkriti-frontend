@@ -108,107 +108,38 @@ input[type=text]{
     color: black;
 }
 
-@media (max-width: 750px){
+@media screen and (max-width: 640px){
     .login-illus{
         display: none;
     }
     .right-sec{
+        padding: 10px;
+        min-height: auto;
         width: 100%;
-    }
-    main{
-        padding: 50px;
     }
 }
 
-@media (width: 360px) and (height: 640px){
+@media screen and (min-width: 640px) and (max-width: 731px){
     .login-illus{
         display: none;
     }
     .right-sec{
-        margin: auto;
-        height: 90%;
-        padding: 15px;
-    }
-    main{
-        padding: 40px;
-    }
-}
-
-@media (width: 320px) and (height: 568px){
-    .signup-illus{
-        display: none;
-    }
-    .right-sec{
-        height: 90%;
+        min-height: auto;
+        width: 100%;
         padding: 20px;
     }
-    .forgotpssd{
-        transform: translateY(-100%);
-        margin-top: 0px;
-    }
     main{
-        padding: 37px;
-    }
-    .b1{
-        margin-top: 0px;
-    }
-}
-
-@media (width: 375px) and (height: 812px){
-    .signup-illus{
-        display: none;
-    }
-    .right-sec{
-        height: 120%;
         padding: 20px;
     }
-    .b1{
-        margin-top: 15px;
-    }
 }
 
-@media (width: 768px) and (height: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
     .right-sec{
+        min-height: auto;
         width: 100%;
-        background: rgba( 145, 113, 100, 0.30 );
-        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
-        backdrop-filter: blur( 3.0px );
-        -webkit-backdrop-filter: blur( 3.0px );
-        border-radius: 100px;
-        align-items: center;
-        transform: translateY(35px);
-        padding: 30px;
-        height: 50%;
+        padding: 20px;
     }
-    main{
-        padding: 30px;
-    }
-    .b1{
-        margin-top: 18px;
-        width: 60%;
+    .main{
+        padding: 20px;
     }
 }
-
-@media (width: 1024px) and (height: 1366px){
-    .right-sec{
-        width: 100%;
-        background: rgba( 145, 113, 100, 0.30 );
-        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
-        backdrop-filter: blur( 3.0px );
-        -webkit-backdrop-filter: blur( 3.0px );
-        border-radius: 100px;
-        align-items: center;
-        transform: translateY(35px);
-        padding: 30px;
-        height: 0%;
-    }
-    main{
-        padding: 30px;
-    }
-    .b1{
-        margin-top: 18px;
-        width: 60%;
-    }
-}
-
-/*devices to be fixed- iPad, iPad Pro, Galaxy Fold*/

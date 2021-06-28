@@ -41,8 +41,8 @@ main{
     backdrop-filter: blur( 3.0px );
     -webkit-backdrop-filter: blur( 3.0px );
     border-radius: 100px;
+    min-height: 90%;
     align-items: center;
-    min-height: 85%;
     transform: translateY(35px);
     padding: 40px;
 }
@@ -100,106 +100,64 @@ input[type=text]{
     color: black;
 }
 
-@media (max-width: 750px){
-    .signup-illus{
-        display: none;
-    }
-    .right-sec{
-        width: 100%;
-    }
-    main{
-        padding: 50px;
-    }
-}
-
-@media (width: 360px) and (height: 640px){
-    .signup-illus{
-        display: none;
-    }
-    .right-sec{
-        height: 120%;
-        padding: 0 40px 0;
-    }
-    main{
-        padding: 40px;
-    }
-}
-
 @media (width: 320px) and (height: 568px){
     .signup-illus{
         display: none;
     }
     .right-sec{
-        height: 130%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transform: translateY(5%);
+        font-size: 10px;
         padding: 10px;
-    }
-    main{
-        padding: 37px;
-    }
-    .b1{
-        transform: translateY(-30%);
-        margin-top: 0px;
+        min-height: auto;
+        width: 100%;
     }
 }
 
-@media (width: 375px) and (height: 812px){
+@media screen and (max-width: 640px){
     .signup-illus{
         display: none;
     }
     .right-sec{
-        height: 120%;
+        padding: 10px;
+        min-height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 731px){
+    .signup-illus{
+        display: none;
+    }
+    .right-sec{
+        min-height: auto;
+        width: 100%;
         padding: 20px;
     }
     main{
-        padding: 70px;
-    }
-    .b1{
-        margin-top: 15px;
+        padding: 20px;
     }
 }
 
-@media (width: 768px) and (height: 1024px){
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .right-sec{
+        height: auto;
         width: 100%;
-        background: rgba( 145, 113, 100, 0.30 );
-        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
-        backdrop-filter: blur( 3.0px );
-        -webkit-backdrop-filter: blur( 3.0px );
-        border-radius: 100px;
-        align-items: center;
-        transform: translateY(35px);
-        padding: 30px;
-        height: 50%;
+        padding: 20px;
     }
-    main{
-        padding: 30px;
-    }
-    .b1{
-        margin-top: 18px;
-        width: 60%;
+    .main{
+        padding: 20px;
     }
 }
 
-@media (width: 1024px) and (height: 1366px){
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
     .right-sec{
+        min-height: auto;
         width: 100%;
-        background: rgba( 145, 113, 100, 0.30 );
-        box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
-        backdrop-filter: blur( 3.0px );
-        -webkit-backdrop-filter: blur( 3.0px );
-        border-radius: 100px;
-        align-items: center;
-        transform: translateY(35px);
-        padding: 30px;
-        height: 50%;
+        padding: 20px;
     }
-    main{
-        padding: 30px;
-    }
-    .b1{
-        margin-top: 18px;
-        width: 60%;
+    .main{
+        padding: 20px;
     }
 }
-
-/*devices to be fixed- iPhone 6/7/8, iPad, iPad Pro, Galaxy Fold*/
