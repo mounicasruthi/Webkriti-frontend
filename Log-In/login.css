@@ -1,0 +1,145 @@
+@font-face{
+    font-family: "Gilroy Semi-Bold";
+    src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy Semi-Bold", sans-serif;
+    color: black;
+}
+
+body{
+    background-color: #EBE691;
+    overflow: hidden;
+}
+
+main{
+    padding: 30px;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-illus{
+    width: 80%;
+    transform: translateY(40px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-sec{
+    width: 40%;
+    background: rgba( 145, 113, 100, 0.30 );
+    box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.20 );
+    backdrop-filter: blur( 3.0px );
+    -webkit-backdrop-filter: blur( 3.0px );
+    border-radius: 100px;
+    align-items: center;
+    min-height: 70%;
+    transform: translateY(40px);
+    padding: 40px;
+}
+
+.username,
+.password{
+    padding: 10px;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    margin: 0 0;
+}
+
+.forgotpssd{
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 0;
+}
+
+.forgotpssd:hover{
+    color: white;
+    cursor: pointer;
+}
+
+input[type=password],
+input[type=text]{
+    background-color: rgba(255, 255, 255, 0.60);
+    color: black;
+    align-items: center;
+    outline: none;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    width: 80%;
+}
+
+.b1{
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 8px 0px 0 rgba( 0, 0, 0, 0.10 );
+    font-weight: 900;
+    font-size: 25px;
+    background: #4E9C64;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    width: 55%;
+}
+
+.b1:hover{
+    transform: scale(1.05);
+    transition: transform .2s;
+}
+
+::placeholder{
+    font-weight: 900;
+    color: black;
+}
+
+@media screen and (max-width: 640px){
+    .login-illus{
+        display: none;
+    }
+    .right-sec{
+        padding: 10px;
+        min-height: auto;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 731px){
+    .login-illus{
+        display: none;
+    }
+    .right-sec{
+        min-height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+    main{
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){ 
+    .right-sec{
+        min-height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+    .main{
+        padding: 20px;
+    }
+}
