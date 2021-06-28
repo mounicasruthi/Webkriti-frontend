@@ -111,7 +111,7 @@ nav li {
   font-family: "Gilroy Dark";
 }
 
-body {  
+body {
   min-height: 100vh;
   width: 100%;
   background-image: url("../assets/illustrations/background.svg");
@@ -133,7 +133,6 @@ body {
   margin: auto;
   border: 1px solid #000;
   color: #000;
-  /* padding: 10px; */
 }
 
 .text-content {
@@ -142,40 +141,36 @@ body {
   border-bottom: 1px solid #000;
   margin: 0;
   padding: 0;
-  background-color: #EEE3E3;
+  background-color: #eee3e3;
   border-radius: 20px 20px 0px 0px;
   padding: 10px;
   font-family: "Gilroy Semi-Bold";
 }
-
 
 .image-content {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -20%);
-  /* align-items: center;
-  justify-content:center; */
   text-align: center;
-  }
+}
 
- .cam-text {
+.cam-text {
   font-size: 29px;
   font-family: "Gilroy Semi-Bold";
   padding: 0px;
   text-align: center;
   margin-top: -13px;
- }
+}
 
- .image-cam {
+.image-cam {
   max-width: 100%;
   height: auto;
- }
+}
 
 .image-cam:hover {
   transform: scale(1.04);
 }
-
 
 .sidenav {
   height: 100%;
@@ -244,15 +239,13 @@ body {
   }
 }
 
-@media screen and (max-width: 680px)
-{
+@media screen and (max-width: 680px) {
   .cam-text {
     font-size: 24px;
   }
   .image-content {
     size: 16px;
   }
-  
 }
 
 @media screen and (max-width: 550px) {
@@ -266,7 +259,6 @@ body {
     width: 200px;
     margin-top: 20px;
   }
-  
 }
 
 @media screen and (max-height: 450px) {
@@ -289,5 +281,4 @@ body {
     width: 150px;
     margin-top: 20px;
   }
-  
 }
