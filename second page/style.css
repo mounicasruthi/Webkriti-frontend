@@ -45,6 +45,11 @@ body{
     font-weight:bold;
 }
 
+.button1:hover,.button2:hover{
+    transform: scale(1.05);
+    transition: transform .2s;
+}
+
 .button1{
     margin-left:8rem;
     margin-top:4rem;
