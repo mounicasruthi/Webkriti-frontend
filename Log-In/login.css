@@ -25,6 +25,11 @@ main{
     justify-content: space-between;
 }
 
+
+a{
+    text-decoration: none;
+}
+
 .login-illus{
     width: 80%;
     transform: translateY(40px);
