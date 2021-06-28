@@ -140,6 +140,7 @@ body {
   -webkit-backdrop-filter: blur(2px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-bottom:10px;
 }
 
 .mainpfp {
@@ -217,10 +218,11 @@ padding: 10px;
 }
 
 .card4 {
-  width: 98%;
+  width: 90%;
   height: 280px;
   background-color: #dad8d8;
   border-radius: 20px;
+  padding:10px;
   border: 1px solid #000;
   color: #000;
 }
