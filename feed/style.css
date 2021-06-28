@@ -16,6 +16,11 @@
   src: url("../assets/fonts/Gilroy-ExtraBold.otf");
 }
 
+@font-face {
+  font-family: "Gilroy Semi-Bold";
+  src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
 nav {
   padding: 0px;
   background: #e5e5e5;
@@ -116,6 +121,7 @@ body {
 .container {
   margin-top: 70px;
   width: 70%;
+
   padding: 20px 15px;
   border: 1px solid #000;
   color: #000;
@@ -124,10 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* background-color: #c4c4c4; */
-  /* mix-blend-mode: luminosity; */
-    /* opacity: 0.5;     */
- transform: translate(20%, 0%); 
+
+  transform: translate(20%, 0%);
 
   background: rgba(196, 196, 196, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -137,11 +141,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-
-
 .card-main {
-  width:700px;
-  height:300px;
+  width: 700px;
+  height: auto;
   background-color: #dad8d8;
   border-radius: 20px;
 
@@ -151,131 +153,114 @@ body {
 
   display: flex;
   flex-direction: column;
-    align-items: center;
+  align-items: center;
 }
 
- .card-header {
-  padding-top:4px;
-  padding-bottom:4px;
-  width:100%;
-  height:20%;
-  border-radius: 20px;
+.card-header {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: 100%;
+  height: 20%;
+  border-radius: 20px 20px 0px 0px;
 
   display: flex;
-    padding:6px;
-    justify-content:space-between;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.87);
-    background-color: #fff;
+  padding: 6px;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #eee3e3;
 }
 
-.dot{
- background-color:pink;
- border-radius:50%;
- padding:10px;
- height:30px;
- width:30px;
- margin-left:4px;
- justify-content:center;
- align-items:center;
+.dot {
+  background-color: pink;
+  border-radius: 50%;
+  padding: 10px;
+  height: 30px;
+  width: 30px;
+  margin-left: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
-.name{
+.name {
   text-align: center;
-  justify-content:center;
-  font-size:20px;
+  justify-content: center;
+  font-size: 20px;
   margin-left: 10px;
-  padding:6px;
+  padding: 6px;
+  font-family: "Gilroy Semi-Bold";
 }
 
 .card-date {
-flex: 1 1 auto;
-display: block;
+  flex: 1 1 auto;
+  display: block;
 }
 
-.like{
-  display:flex;
+.like {
+  display: flex;
   align-items: center;
-  padding:4px;
-  height:30px;
-  font-size:20px;
-
+  padding: 4px;
+  height: 30px;
+  font-size: 20px;
 }
 
-
-.icon{
-  height:30px;
+.icon {
+  height: 30px;
 }
 
-.icon>img{
-  height:100%;
-  width:100%;
+.icon > img {
+  height: 100%;
+  width: 100%;
 }
 
-
-.left-section{
+.left-section {
   display: flex;
   justify-content: flex-start;
 }
 
-
-.right-section{
+.right-section {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
-/*
 .card-body {
-  padding: 16px 0px;
-    background-color: rgb(216, 69, 69);
-    display: block;
+  /* background-color:orangered; */
+  background-color: #c4c4c4;
+  height: auto;
+  width: 100%;
+  /* padding:10px; */
+  margin-top: 0px;
+  /* margin-left:5px; */
+  padding: 15px;
+  border-radius: 0px 0px 20px 20px;
+  align-items: center;
+  justify-content: center;
 }
 
+.card-caption {
+  display: flex;
+  word-break: break-word;
+  min-height: 30px;
+  padding: 4px;
+  width: 100%;
+  /* color: bisque; */
+  color: #000;
+  font-size: 16px;
+}
 
- .card-caption {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
- }
+.post-img {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: auto;
+  justify-content: center;
+  align-items: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-
- .card-picture {
-  padding: 8px;
-  text-align: center;
-  background-color: #f2f5f4;
-  display: block;
- }
-
- */
-
- .card-body{
-   background-color:orangered;
-   height:100%;
-   width:80%;
-  /* padding:10px; */
-   margin-top:0px;
-   margin-left:5px;
-   padding:5px;
- }
-
- .card-caption{
-   display: flex;
-   word-break: break-word;
-   min-height:30px;
-   padding:4px;
-   width:100%;
-   color: bisque;
-   font-size:16px;
- }
-
- .card-picture{
-   width:100%;
-   background-color: plum;
-   height:80%;
- }
 
 
 /*
@@ -305,11 +290,11 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-   z-index: 1; 
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #111;
-   overflow-x: hidden; 
+  overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
@@ -362,7 +347,7 @@ body {
   #search {
     float: right;
     margin-left: 30px;
-    
+
     width: 200px;
     margin-top: 20px;
   }
@@ -380,7 +365,6 @@ body {
     margin-top: 20px;
   }
 }
-
 
 @media screen and (max-height: 450px) {
   .sidenav {
