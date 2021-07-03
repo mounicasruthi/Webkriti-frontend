@@ -40,14 +40,29 @@
       </nav>  
 
         <div class="card-main">
-          <div class="text-content">Write something...</div>
-          <div class="image-content">
-          <figure>
+          <input 
+          class="text-content"
+            type="text"
+            placeholder="Write something.."
+          />
+          
+          <!-- <div class="image-content"> -->
+          <!-- <figure>
             <a href="#"><img class="image-cam" src="../assets/illustrations/camera.svg" alt="Upload"/></a>
                 <figcaption class="cam-text">Click to upload</figcaption>
-            </figure>
-          </div>
+            </figure> -->
+            <!-- <label class="cam-text image-content" for="img">Click to upload</label>
+            <input class="image-cam image-content" type="file" id="img" name="img" accept="image/*"> -->
+            <label class="cam-text image-content" for="file-input">
+              <img src="../assets/illustrations/camera.svg"/>
+            </label>
+          
+            <input class="image-content-input" id="file-input" type="file" />
+            <!-- <input type="submit"> -->
+           
+          <!-- </div> -->
         </div>
+        <div class="post-button">Post</div>
         
     <script src="script.js"></script>
   </body>
