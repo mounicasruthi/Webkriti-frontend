@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Gilroy Semi-Bold";
-  src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+  font-family: "Gilroy Light";
+  src: url("../assets/Gilroy-Light.otf");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gilroy Semi-Bold", sans-serif;
+  font-family: "Gilroy Light", sans-serif;
   color: black;
 }
 

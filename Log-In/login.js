@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 
-const apiUrl = "";
+const apiUrl = "https://connectup-backend.herokuapp.com/";
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
