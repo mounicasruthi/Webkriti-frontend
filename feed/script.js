@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 const logout = document.querySelector(".logout");
 
-const apiUrl = "https://connectup-backend.herokuapp.com/";
+const apiUrl = "https://connectup-backend.herokuapp.com";
 
 const token = localStorage.getItem("jwt");
 
@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
   body.classList.add("visible");
 
   if (token) {
-    fetch(`${apiUrl}/posts/getallposts`, {
+    fetch(`${apiUrl}/posts/getposts`, {
       method: "GET",
       headers: {
         authorization: token,
