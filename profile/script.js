@@ -1,8 +1,7 @@
 const container = document.querySelector(".container");
 const logout = document.querySelector(".logout");
-// const createNoteButton = document.querySelector(".new-note");
 
-const apiUrl = "";
+const apiUrl = "https://connectup-backend.herokuapp.com/";
 
 const token = localStorage.getItem("jwt");
 
@@ -13,9 +12,9 @@ logout.addEventListener("click", () => {
 
 let cardData = [];
 
-createNoteButton.addEventListener("click", () => {
-  location.href = "/create/create.html";
-});
+// createNoteButton.addEventListener("click", () => {
+//   location.href = "/create/create.html";
+// });
 
 const create = (array) => {
   cardContainer.innerHTML = "";
@@ -28,8 +27,9 @@ const create = (array) => {
     card.classList.add("card");
     card.id = id;
 
-    // const insideHtml = `<div class="card-header"><div class="card-heading">${heading}</div><a href="../updateNotes/updateNotes.html?noteId=${id}"><div class="edit-note"><img src="../../assets/edit-note.svg" alt="" /></div></a></div><div class="card-content">${content}</div>`;
-    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${username}</div></div><div class="right-section"><div class="like">${like-count}</div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="../assets/images/postImg.png" alt="postImg"/></div>`
+    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${username}</div></div><div class="right-section"><div class="like">${
+      like - count
+    }</div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="../assets/images/postImg.png" alt="postImg"/></div>`;
 
     card.innerHTML = insideHtml;
 
@@ -61,14 +61,10 @@ window.addEventListener("load", () => {
   }
 });
 
-
-
-
-
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

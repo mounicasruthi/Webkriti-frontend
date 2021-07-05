@@ -1,6 +1,6 @@
 const createPostButton = document.querySelector(".post-button");
 
-const apiUrl = "";
+const apiUrl = "https://connectup-backend.herokuapp.com/";
 
 const token = localStorage.getItem("jwt");
 
