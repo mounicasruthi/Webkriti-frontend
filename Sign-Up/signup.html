@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="signup.css">
-        <title>Sign Up</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signup.css" />
+    <title>Sign Up</title>
+  </head>
 
-    <body>
-        
-        <main class="signup-cont">
+  <body>
+    <main class="signup-cont">
+      <div class="left-sec">
+        <img
+          src="../assets/illustrations/signup-illus.svg"
+          class="signup-illus"
+          alt="signup-illus"
+        />
+      </div>
 
-            <div class="left-sec">
-                <img src="../assets/illustrations/signup-illus.svg" class="signup-illus" alt="signup-illus">
-            </div>
+      <div class="right-sec">
+        <form class="signup-form">
+          <div class="email">E-mail</div>
+          <input class="signup-email" type="text" /><br />
+          <div class="username">Username</div>
+          <input class="signup-username" type="text" /><br />
+          <div class="password">Password</div>
+          <input class="signup-password" type="password" /><br />
+          <div class="confpssd">Confirm Password</div>
+          <input class="signup-confpassword" type="password" /><br /><br />
+          <a href="../feed/feed.html">
+            <button type="submit" class="b1">Sign-Up</button></a
+          >
+        </form>
+      </div>
+    </main>
 
-            <div class="right-sec">
-                <form>
-                    <div class="email">E-mail</div>
-                    <input type="email" id="em"><br>
-                    <div class="username">Username</div>
-                    <input type="text" id="user"><br>
-                    <div class="password">Password</div>
-                    <input type="password" id="pssd1"><br>
-                    <div class="confpssd">Confirm Password</div>
-                    <input type="password" id="pssd2"><br><br>
-                    <a href="../feed/feed.html"> <div class="b1"> Sign-Up</div></a>
-                </form>
-            </div>
-            
-        </main>
-
-        <script src="signup.js"></script>
-        
-    </body> 
+    <script src="signup.js"></script>
+  </body>
 </html>
