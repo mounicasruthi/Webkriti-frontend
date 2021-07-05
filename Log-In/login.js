@@ -1,0 +1,42 @@
+const body = document.querySelector("body");
+
+const apiUrl = "";
+
+window.addEventListener("load", () => {
+  body.classList.add("visible");
+});
+
+const signInForm = document.querySelector(".login-form");
+
+signInForm.addEventListener("submit", event => {
+  event.preventDefault();
+
+  const logInEmail = document.querySelector(".login-email");
+  const logInPassword = document.querySelector(".login-password");
+
+  const email = logInEmail.value;
+  const password = logInPassword.value;
+
+  fetch(`${apiUrl}/auth/signin`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password }),
+  })
+    .then(res => res.json())
+    .then(data => {
+      const { token } = data;
+
+      if (token) {
+        localStorage.setItem("jwt", token);
+        location.href = "/feed/feed.html";
+      } else {
+        alert("Please log in again");
+      }
+    })
+    .catch(err => {
+      alert("There was an error in log in, please retry");
+      console.log(err);
+    });
+});
