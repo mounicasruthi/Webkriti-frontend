@@ -6,17 +6,24 @@
 
 body{
     height:100vh;
-    background-color:#EBE691;
     overflow:hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./assets/bgImage.svg");
 }
    
 
 .text{
     font-family: Poppins,sans-serif;
-    font-size:8rem;
-    margin-left: 2rem;
+    font-size:7.5rem;
     font-weight:bold;
-    margin-top:12rem;
+    position:center;
+    display:flex;
+    margin:auto;
+    justify-content:center;
+    text-align:center;
+    padding:80px 0px 0px 0px;
 }
 
 .green{
@@ -29,41 +36,99 @@ body{
 
 .tagline{
     font-family:Poppins,sans-serif;
-    font-size:3.6rem;
-    margin-left:3rem;
+    font-size:3rem;
+    /*display:flex;*/
+    margin:auto;
+    justify-content: center;
+    text-align: center;
 }
 
-.button1,.button2{
-    background-color:#D5AF2F;
-    color:black;
+.signUp,.logIn{
+    background-color: #4E9C64;
+    color:#EBE691;
+    font-size:1.5rem;
+    text-align: center;
+    font-family: Poppins,sans-serif;
+    font-weight:bold;
+    width:100%;
+    margin:10px;
+    padding:10px;
+    border-radius: 2rem;
+}
+
+
+.next{
+    display:flex;
+    width:700px;
+    margin-top:40px;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:center;
+}
+
+.logIn{
+    margin-left:20px;
+}
+
+.signUp{
+    margin-left:auto;
+}
+
+
+
+
+
+/*
+.signUp,.logIn{
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+/*  
+.logIn{
+    margin:0px;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+
+/*
+.signUp,.logIn{
+    background-color:#4E9C64;
+    color:#EBE691;
     padding:1rem;
     width:10%;
     border-radius:2rem;
     font-size:1.4rem;
+     text-decoration: none;
+     text-align: center;
     border:none;
     font-family: Poppins,sans-serif;
     font-weight:bold;
 }
+*/
 
-.button1:hover,.button2:hover{
+
+a:link{
+    text-decoration: none;
+}
+
+.signUp:hover,.logIn:hover{
     transform: scale(1.05);
     transition: transform .2s;
 }
 
-.button1{
+/*
+.signUp{
     margin-left:8rem;
     margin-top:4rem;
     margin-right: 3rem;
 }
+*/
 
-.illustration{
-    margin-left:2rem;
-    display:block;
-    transform:translate(10%,-70%);
-    width:90%;
-}
-
-
+/*
 @media screen and (max-width:1300px)
 {
     .text{
@@ -243,3 +308,4 @@ body{
         margin-left:40%;
     }
 }
+*/
