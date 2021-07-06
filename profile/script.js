@@ -1,8 +1,8 @@
 const container = document.querySelector(".container");
 const logout = document.querySelector(".logout");
 
-// const apiUrl = "https://connectup-backend.herokuapp.com";
-const apiUrl = "http://localhost:8000";
+const apiUrl = "https://connectup-backend.herokuapp.com";
+// const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 

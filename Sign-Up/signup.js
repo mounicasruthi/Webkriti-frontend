@@ -32,6 +32,7 @@ signUpForm.addEventListener("submit", event => {
     .then(res => res.json())
     .then(data => {
       const { token } = data;
+      console.log(data);
 
       if (token) {
         localStorage.setItem("jwt", token);
