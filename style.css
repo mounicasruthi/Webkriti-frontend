@@ -1,82 +1,77 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    height:100vh;
-    overflow:hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("./assets/bgImage.svg");
-}
-   
-
-.text{
-    font-family: Poppins,sans-serif;
-    font-size:7.5rem;
-    font-weight:bold;
-    position:center;
-    display:flex;
-    margin:auto;
-    justify-content:center;
-    text-align:center;
-    padding:80px 0px 0px 0px;
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./assets/bgImage.svg");
 }
 
-.green{
-    color:#268540;
+.text {
+  font-family: Poppins, sans-serif;
+  font-size: 7.5rem;
+  font-weight: bold;
+  position: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 0px 0px 0px;
 }
 
-.black{
-    color: black;
+.green {
+  color: #268540;
 }
 
-.tagline{
-    font-family:Poppins,sans-serif;
-    font-size:3rem;
-    /*display:flex;*/
-    margin:auto;
-    justify-content: center;
-    text-align: center;
+.black {
+  color: black;
 }
 
-.signUp,.logIn{
-    background-color: #4E9C64;
-    color:#EBE691;
-    font-size:1.5rem;
-    text-align: center;
-    font-family: Poppins,sans-serif;
-    font-weight:bold;
-    width:100%;
-    margin:10px;
-    padding:10px;
-    border-radius: 2rem;
+.tagline {
+  font-family: Poppins, sans-serif;
+  font-size: 3rem;
+  /*display:flex;*/
+  margin: auto;
+  justify-content: center;
+  text-align: center;
 }
 
-
-.next{
-    display:flex;
-    width:700px;
-    margin-top:40px;
-    margin-left:auto;
-    margin-right:auto;
-    justify-content:center;
+.signUp,
+.logIn {
+  background-color: #4e9c64;
+  color: #ebe691;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2rem;
 }
 
-.logIn{
-    margin-left:20px;
+.next {
+  display: flex;
+  width: 700px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
-.signUp{
-    margin-left:auto;
+.logIn {
+  margin-left: 20px;
 }
 
-
-
-
+.signUp {
+  margin-left: auto;
+}
 
 /*
 .signUp,.logIn{
@@ -92,7 +87,6 @@ body{
     align-items: center;
 }
 */
-
 
 /*
 .signUp,.logIn{
@@ -110,14 +104,14 @@ body{
 }
 */
 
-
-a:link{
-    text-decoration: none;
+a:link {
+  text-decoration: none;
 }
 
-.signUp:hover,.logIn:hover{
-    transform: scale(1.05);
-    transition: transform .2s;
+.signUp:hover,
+.logIn:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
 }
 
 /*

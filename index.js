@@ -19,4 +19,3 @@ logInButton.addEventListener("click", () => {
 signUpButton.addEventListener("click", () => {
   location.href = "/Sign-Up/signup.html";
 });
-
