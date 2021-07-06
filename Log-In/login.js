@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
@@ -31,7 +31,7 @@ signInForm.addEventListener("submit", event => {
 
       if (token) {
         localStorage.setItem("jwt", token);
-        location.href = "/feed/feed.html";
+        location.href = "/profile/profile.html";
       } else {
         alert("Please log in again");
       }

@@ -35,7 +35,7 @@ signUpForm.addEventListener("submit", event => {
 
       if (token) {
         localStorage.setItem("jwt", token);
-        location.href = "/feed/feed.html";
+        location.href = "/profile/profile.html";
       } else {
         alert("Please sign up again");
       }

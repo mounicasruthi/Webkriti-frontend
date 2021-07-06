@@ -1,7 +1,8 @@
 const container = document.querySelector(".container");
 const logout = document.querySelector(".logout");
 
-const apiUrl = "https://connectup-backend.herokuapp.com/";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -12,9 +13,9 @@ logout.addEventListener("click", () => {
 
 let cardData = [];
 
-// createNoteButton.addEventListener("click", () => {
-//   location.href = "/create/create.html";
-// });
+createNoteButton.addEventListener("click", () => {
+  location.href = "/create/create.html";
+});
 
 const create = (array) => {
   cardContainer.innerHTML = "";
@@ -27,9 +28,8 @@ const create = (array) => {
     card.classList.add("card");
     card.id = id;
 
-    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${username}</div></div><div class="right-section"><div class="like">${
-      like - count
-    }</div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="../assets/images/postImg.png" alt="postImg"/></div>`;
+    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${username}</div></div><div class="right-section"><div class="like">${like-count}
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="postImg"/></div>`;
 
     card.innerHTML = insideHtml;
 
@@ -43,7 +43,7 @@ window.addEventListener("load", () => {
   body.classList.add("visible");
 
   if (token) {
-    fetch(`${apiUrl}/posts/getuserposts`, {
+    fetch(`${apiUrl}/posts/getposts`, {
       method: "GET",
       headers: {
         authorization: token,
