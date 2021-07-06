@@ -30,7 +30,7 @@ profileButton.addEventListener("click", () => {
 });
 
 
-const create = (array) => {
+const createPosts = (array) => {
   container.innerHTML = "";
 
   array.forEach((cardObj) => {
