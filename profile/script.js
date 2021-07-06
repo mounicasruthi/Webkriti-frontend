@@ -31,7 +31,7 @@ profileButton.addEventListener("click", () => {
 
 
 const create = (array) => {
-  cardContainer.innerHTML = "";
+  container.innerHTML = "";
 
   array.forEach((cardObj) => {
     const { content, image } = cardObj;
@@ -46,7 +46,7 @@ const create = (array) => {
 
     card.innerHTML = insideHtml;
 
-    cardContainer.appendChild(card);
+    container.appendChild(card);
   });
 };
 
