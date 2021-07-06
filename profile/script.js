@@ -65,7 +65,7 @@ window.addEventListener("load", () => {
       .then((res) => res.json())
       .then((data) => {
         cardData = data.data;
-        createNotes(data.data);
+        createPosts(data.data);
       })
       .catch((err) => {
         alert("Error Fetching data");
