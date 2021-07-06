@@ -18,12 +18,13 @@ signInForm.addEventListener("submit", event => {
   const email = logInEmail.value;
   const password = logInPassword.value;
 
-  if (email === "") {
-    alert("Email is mandatory");
-    return;
-  }
   if (password === "") {
     alert("Password is mandatory");
+    return;
+  }
+
+  if (email === "") {
+    alert("Email is mandatory");
     return;
   }
 
