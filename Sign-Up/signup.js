@@ -16,6 +16,28 @@ signUpForm.addEventListener("submit", event => {
   const password = document.querySelector(".signup-password").value;
   const confPassword = document.querySelector(".signup-confpassword").value;
 
+  // function validateEmail(inputText) {
+  //   var mailformat =
+  //     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  //   if (!inputText.value.match(mailformat)) {
+  //     alert("You have entered an invalid email address!");
+  //     document.signupForm.emailField.focus();
+  //     return;
+  //   }
+  // }
+
+  var mailFormat =
+    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (!email.match(mailFormat)) {
+    alert("Please enter a valid email address");
+    return;
+  }
+
+  if (name === "") {
+    alert("Please enter a valid name");
+    return;
+  }
+
   if (password !== confPassword) {
     alert("The passwords don't match");
     return;
