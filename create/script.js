@@ -1,12 +1,20 @@
-const createButton = document.querySelector(".post-button");
-const createPostButton = document.querySelector(".create");
+const createButton = document.querySelector(".submit-button");
+const createPostButton = document.querySelector(".createbtn");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
+const logout = document.querySelector(".logOut");
 
 
-const apiUrl = "https://connectup-backend.herokuapp.com/";
+const apiUrl = "https://connectup-backend.herokuapp.com";
 
 const token = localStorage.getItem("jwt");
+
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("jwt");
+  location.href = "/";
+});
+
 
 createPostButton.addEventListener("click", () => {    
   location.href = "/create/create.html";
@@ -37,7 +45,7 @@ createButton.addEventListener("click", () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          location.href = "/profile/profile.html";
+          location.href = "/feed/feed.html";
         }
       })
       .catch((err) => {
