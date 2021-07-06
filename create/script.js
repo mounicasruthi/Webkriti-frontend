@@ -1,5 +1,5 @@
 const createButton = document.querySelector(".submit-button");
-const createPostButton = document.querySelector(".create");
+const createPostButton = document.querySelector(".createbtn");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
