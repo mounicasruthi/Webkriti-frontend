@@ -1,5 +1,6 @@
 const body = document.querySelector("body");
-const logInsignUpButton = document.querySelector(".log-in-sign-up");
+const logInButton = document.querySelector(".logIn");
+const signUpButton = document.querySelector(".signUp");
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
@@ -11,7 +12,10 @@ window.addEventListener("load", () => {
   }
 });
 
-logInsignUpButton.addEventListener("click", () => {
-  location.href = "/Sign-Up/signup.html";
+logInButton.addEventListener("click", () => {
   location.href = "/Log-In/login.html";
+});
+
+signUpButton.addEventListener("click", () => {
+  location.href = "/Sign-Up/signup.html";
 });
