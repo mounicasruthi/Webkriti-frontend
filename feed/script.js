@@ -1,13 +1,18 @@
 const container = document.querySelector(".container");
-const createPostButton = document.querySelector(".create")
-const homeButton = document.querySelector(".home")
-const profileButton = document.querySelector(".profile")
-
+const createPostButton = document.querySelector(".create");
+const homeButton = document.querySelector(".home");
+const profileButton = document.querySelector(".profile");
+const logout = document.querySelector(".logOut");
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
 // const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
+
+logout.addEventListener("click", () => {
+  localStorage.removeItem("jwt");
+  location.href = "/";
+});
 
 let cardData = [];
 

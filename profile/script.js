@@ -1,5 +1,8 @@
 const container = document.querySelector(".container");
-const logout = document.querySelector(".logout");
+const createPostButton = document.querySelector(".create");
+const homeButton = document.querySelector(".home");
+const profileButton = document.querySelector(".profile");
+const logout = document.querySelector(".logOut");
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
 // const apiUrl = "http://localhost:8000";
@@ -13,9 +16,19 @@ logout.addEventListener("click", () => {
 
 let cardData = [];
 
-createNoteButton.addEventListener("click", () => {
+
+createPostButton.addEventListener("click", () => {    
   location.href = "/create/create.html";
 });
+
+homeButton.addEventListener("click", () => {    
+  location.href = "/feed/feed.html";
+});
+
+profileButton.addEventListener("click", () => {    
+  location.href = "/profile/profile.html";
+});
+
 
 const create = (array) => {
   cardContainer.innerHTML = "";
