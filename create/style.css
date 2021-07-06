@@ -171,6 +171,7 @@ body {
   padding: 10px;
   font-family: "Gilroy Semi-Bold";
   border-style: none;
+  word-break: break-word;
 }
 
 .image-content-input {

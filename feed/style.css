@@ -489,8 +489,6 @@ body {
   .like {
     height: 16px;
     align-items: center;
-    /*
-     justify-content:center;*/
     padding-right: 0px;
     margin-right: -8px;
     font-size: 14px;
