@@ -88,8 +88,6 @@ nav li {
   transition: transform 0.2s;
 }
 
-
-
 .btn {
   display: none;
   padding: 0px 10px 0px 20px;
@@ -126,8 +124,7 @@ body {
 .container {
   margin-top: 70px;
   width: 70%;
-
-  padding: 20px 15px;
+  padding-bottom: 10px;
   border: 1px solid #000;
   color: #000;
   display: flex;
@@ -136,9 +133,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 20px;
-
   transform: translate(20%, 0%);
-
   background: rgba(196, 196, 196, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
@@ -147,9 +142,9 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.icon:hover{
+.icon:hover {
   transform: scale(1.05);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .card-main {
@@ -158,11 +153,9 @@ body {
   height: auto;
   background-color: #dad8d8;
   border-radius: 20px;
-
   border: 1px solid #000;
   color: #000;
   /* padding: 20px; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,14 +262,12 @@ body {
   height: auto;
   padding-left: 30px;
   padding-right: 30px;
-  
+
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
-
-
 
 /*
 .card2 {
@@ -314,7 +305,9 @@ body {
   padding-top: 60px;
 }
 
-.createsn, .homesn, .profilesn  {
+.createsn,
+.homesn,
+.profilesn {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -324,7 +317,9 @@ body {
   transition: 0.3s;
 }
 
-.createsn:hover , .homesn:hover , .profilesn:hover{
+.createsn:hover,
+.homesn:hover,
+.profilesn:hover {
   color: #f1f1f1;
 }
 
@@ -390,115 +385,113 @@ body {
   }
 }
 
-
-@media screen and (max-width:450px)
-{
-  .card-header{
-    height:10%;
-   }
- .card-caption{
-   font-size:12px;
-   padding-top:2px;
- }
- .name,.like{
-   font-size:14px;
- }
- .dot{
-   margin-top:4px;
- }
- .icon{
-   height:20px;
-   margin-right:-14px;
-   padding:0px;
- }
- .icon>img{
-   width:100%;
-   height:100%;
- }
- .dot{
-   width:20px;
-   height:20px;
-   align-items: center;
-   justify-content:center;
- }
- .like{
-   height:20px;
-   align-items: center;
-   /*
-   justify-content:center;*/
-   padding-right:0px;
-   margin-right:-8px;
-   font-size:18px;
- }
-} 
-
-@media screen and (max-width:320px)
-{
-  .logOut{
-    margin-top:-36px;
+@media screen and (max-width: 450px) {
+  .card-header {
+    height: 10%;
   }
-  .card-header{
-   height: 8%;
+  .card-caption {
+    font-size: 12px;
+    padding-top: 2px;
   }
-  .name,.like{
-    font-size:12px;
+  .name,
+  .like {
+    font-size: 14px;
   }
-  .dot{
-    width:14px;
-    height:14px;
+  .dot {
+    margin-top: 4px;
+  }
+  .icon {
+    height: 20px;
+    margin-right: -14px;
+    padding: 0px;
+  }
+  .icon > img {
+    width: 100%;
+    height: 100%;
+  }
+  .dot {
+    width: 20px;
+    height: 20px;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
   }
-  .icon{
-    height:14px;
+  .like {
+    height: 20px;
+    align-items: center;
+    /*
+   justify-content:center;*/
+    padding-right: 0px;
+    margin-right: -8px;
+    font-size: 18px;
   }
-  .icon>img{
-    height:100%;
-    width:100%;
+}
+
+@media screen and (max-width: 320px) {
+  .logOut {
+    margin-top: -36px;
   }
-  .like{
-    height:14px;
+  .card-header {
+    height: 8%;
+  }
+  .name,
+  .like {
+    font-size: 12px;
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon {
+    height: 14px;
+  }
+  .icon > img {
+    height: 100%;
+    width: 100%;
+  }
+  .like {
+    height: 14px;
     align-items: center;
     /*
     justify-content:center;*/
-    padding-right:0px;
-    margin-right:-8px;
-    font-size:14px;
+    padding-right: 0px;
+    margin-right: -8px;
+    font-size: 14px;
   }
-
 }
 
-@media screen and (max-width:280px)
-{
-  .logOut{
-    width:160px;
+@media screen and (max-width: 280px) {
+  .logOut {
+    width: 160px;
   }
-  .card-header{
-    height:6%;
-   }
-   .name,.like{
-     font-size:10px;
-   }
-   .dot{
-     width:10px;
-     height:10px;
-     align-items: center;
-     justify-content:center;
-   }
-   .icon{
-     height:16px;
-   }
-   .icon>img{
-     height:100%;
-     width:100%;
-   }
-   .like{
-     height:16px;
-     align-items: center;
-     /*
+  .card-header {
+    height: 6%;
+  }
+  .name,
+  .like {
+    font-size: 10px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon {
+    height: 16px;
+  }
+  .icon > img {
+    height: 100%;
+    width: 100%;
+  }
+  .like {
+    height: 16px;
+    align-items: center;
+    /*
      justify-content:center;*/
-     padding-right:0px;
-     margin-right:-8px;
-     font-size:14px;
-   }
+    padding-right: 0px;
+    margin-right: -8px;
+    font-size: 14px;
+  }
 }
