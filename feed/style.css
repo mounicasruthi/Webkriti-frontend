@@ -160,9 +160,9 @@ body {
   border: 1px solid #000;
   color: #000;
   /* padding: 20px; */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 .card-header {
@@ -292,9 +292,6 @@ body {
 }
 */
 
-body {
-  font-family: "Lato", sans-serif;
-}
 
 .sidenav {
   height: 100%;
