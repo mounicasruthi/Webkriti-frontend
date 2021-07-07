@@ -6,35 +6,33 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
+
   <body>
-
     <div class="create">
-
       <nav>
         <div class="logo">Connect<span class="logo2">Up</span></div>
+
         <ul>
           <li>
             <img
             class="image1 createbtn"
             src="../assets/svg/createbtn.svg"
-            alt="Create"
-        />
-      </li>
-      <li>
-          <img
+            alt="Create"/>
+          </li>
+          <li>
+            <img
             class="image2 home"
             src="../assets/svg/homebutton.svg"
-            alt="Home"
-        />
-      </li>
-      <li>
-       <img
+            alt="Home"/>
+          </li>
+          <li>
+            <img
             class="image3 profile"
             src="../assets/svg/profilebtn.svg"
-            alt="Profile"
-        />
+            alt="Profile"/>
           </li>
         </ul>
+
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="../create/create.html">Create</a>
@@ -42,35 +40,19 @@
           <a href="../profile/profile.html">Profile</a>
         </div>
         <span class="btn" style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776; </span>
-        <!-- <input type="search" name="" id="search" placeholder="search" /> -->
+  
         <div class="logOut">Log-Out</div>
-      </nav>  
+      </nav>
 
         <div class="card-main">
-          <input 
-          class="text-content"
-            type="text"
-            placeholder="Write something.."
-          />
-          
-          <!-- <div class="image-content"> -->
-          <!-- <figure>
-            <a href="#"><img class="image-cam" src="../assets/illustrations/camera.svg" alt="Upload"/></a>
-                <figcaption class="cam-text">Click to upload</figcaption>
-            </figure> -->
-            <!-- <label class="cam-text image-content" for="img">Click to upload</label>
-            <input class="image-cam image-content" type="file" id="img" name="img" accept="image/*"> -->
-            <label class="cam-text image-content" for="file-input">
-              <img src="../assets/illustrations/camera.svg"/>
-            </label>
-          
-            <input class="image-content-input" id="file-input" type="file" />
-            <input class="submit-button" type="submit" value="Post"> 
-          
-          <!-- </div>-->
+          <input class="text-content" type="text" placeholder="Write something.."/>
+          <label class="cam-text image-content" for="file-input">
+            <img src="../assets/illustrations/camera.svg"/>
+          </label> 
+          <input class="image-content-input" id="file-input" type="file" />
+          <input class="submit-button" type="submit" value="Post"> 
         </div>
-        <!-- <div class="post-button">Post</div> -->
-        
+
     <script src="script.js"></script>
   </body>
 </html>

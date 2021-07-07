@@ -10,7 +10,6 @@
   font-family: "Gilroy";
   src: url("../assets/fonts/Gilroy-Light.otf");
 }
-
 @font-face {
   font-family: "Gilroy Dark";
   src: url("../assets/fonts/Gilroy-ExtraBold.otf");
@@ -18,6 +17,16 @@
 @font-face {
   font-family: "Gilroy Semi-Bold";
   src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/illustrations/background.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
 }
 
 nav {
@@ -28,14 +37,6 @@ nav {
   width: 100%;
   height: 70px;
   z-index: 2;
-}
-
-.image1,
-.image3 {
-  height: 35px;
-}
-.image2 {
-  height: 40px;
 }
 
 nav ul {
@@ -55,12 +56,19 @@ nav li {
   margin: 0 15px;
 }
 
+.image1,
+.image3 {
+  height: 35px;
+}
+.image2 {
+  height: 40px;
+}
+
 .image1:hover,
 .image2:hover,
 .image3:hover {
   transform: scale(1.1);
 }
-
 
 .logOut {
   cursor: pointer;
@@ -135,17 +143,6 @@ nav li {
   font-family: "Gilroy Dark";
 }
 
-body {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url("../assets/illustrations/background.svg");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  
-}
-
 .card-main {
   position: absolute;
   left: 50%;
@@ -174,15 +171,15 @@ body {
   word-break: break-word;
 }
 
-.image-content-input {
-  visibility:hidden;
-  width:0;
-  height:0
-}
-
 .text-content:hover,
 .text-content:focus {
   outline: none;
+}
+
+.image-content-input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 .image-content {
@@ -191,6 +188,10 @@ body {
   top: 50%;
   transform: translate(-50%, -20%);
   text-align: center;
+}
+
+.image-content:hover {
+  cursor: pointer;
 }
 
 .cam-text {
@@ -204,11 +205,6 @@ body {
 .image-cam {
   max-width: 100%;
   height: auto;
-}
-
-.image-content:hover {
-  /* transform: scale(1.04); */
-  cursor: pointer;
 }
 
 .post-button {
@@ -325,7 +321,7 @@ body {
     display: none;
   }
 
-  .logOut{
+  .logOut {
     float: left;
     margin-left: 30px;
     width: 150px;

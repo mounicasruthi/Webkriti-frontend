@@ -10,15 +10,19 @@
   font-family: "Gilroy";
   src: url("../assets/fonts/Gilroy-Light.otf");
 }
-
 @font-face {
   font-family: "Gilroy Dark";
   src: url("../assets/fonts/Gilroy-ExtraBold.otf");
 }
-
 @font-face {
   font-family: "Gilroy Semi-Bold";
   src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ebe691;
 }
 
 nav {
@@ -29,14 +33,6 @@ nav {
   width: 100%;
   height: 70px;
   z-index: 2;
-}
-
-.image1,
-.image3 {
-  height: 35px;
-}
-.image2 {
-  height: 40px;
 }
 
 nav ul {
@@ -54,6 +50,14 @@ nav li {
   display: inline-block;
   line-height: 56px;
   margin: 0 15px;
+}
+
+.image1,
+.image3 {
+  height: 35px;
+}
+.image2 {
+  height: 40px;
 }
 
 .image1:hover,
@@ -115,28 +119,16 @@ nav li {
   font-family: "Gilroy Dark";
 }
 
-body {
-  min-height: 100vh;
-  width: 100%;
-  background-color: #ebe691;
-}
-
 .container {
   margin-top: 70px;
   width: 70%;
-  /* border: 1px solid #000;
-  color: #000; */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  /* background-color: #c4c4c4;
-  mix-blend-mode: luminosity;
-  opacity: 0.5; */
   transform: translate(20%, 0%);
-
   background: rgba(196, 196, 196, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2px);
@@ -171,7 +163,6 @@ body {
   width: 100%;
   height: 20%;
   border-radius: 20px 20px 0px 0px;
-
   display: flex;
   padding: 6px;
   justify-content: space-between;
@@ -199,13 +190,6 @@ body {
   padding: 6px;
   font-family: "Gilroy Semi-Bold";
 }
-
-/*
-.card-date {
-  flex: 1 1 auto;
-  display: block;
-}
-*/
 
 .like {
   display: flex;
@@ -235,13 +219,10 @@ body {
 }
 
 .card-body {
-  /* background-color:orangered; */
   background-color: #c4c4c4;
   height: auto;
   width: 100%;
-  /* padding:10px; */
   margin-top: 0px;
-  /* margin-left:5px; */
   padding: 15px;
   border-radius: 0px 0px 20px 20px;
   align-items: center;
@@ -254,7 +235,6 @@ body {
   min-height: 30px;
   padding: 4px;
   width: 100%;
-  /* color: bisque; */
   color: #000;
   font-size: 16px;
 }
@@ -266,32 +246,11 @@ body {
   height: auto;
   padding-left: 30px;
   padding-right: 30px;
-
   justify-content: center;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
 }
-
-/*
-.card2 {
-  width: 98%;
-  height: 280px;
-  background-color: #dad8d8;
-  border-radius: 20px;
-  border: 1px solid #000;
-  color: #000;
-}
-.card3 {
-  width: 98%;
-  height: 280px;
-  background-color: #dad8d8;
-  border-radius: 20px;
-  border: 1px solid #000;
-  color: #000;
-}
-*/
-
 
 .sidenav {
   height: 100%;
@@ -419,8 +378,6 @@ body {
   .like {
     height: 20px;
     align-items: center;
-    /*
-   justify-content:center;*/
     padding-right: 0px;
     margin-right: -8px;
     font-size: 18px;
@@ -454,8 +411,6 @@ body {
   .like {
     height: 14px;
     align-items: center;
-    /*
-    justify-content:center;*/
     padding-right: 0px;
     margin-right: -8px;
     font-size: 14px;

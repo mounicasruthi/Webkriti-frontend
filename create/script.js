@@ -4,7 +4,6 @@ const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
-
 const apiUrl = "https://connectup-backend.herokuapp.com";
 
 const token = localStorage.getItem("jwt");
@@ -54,6 +53,7 @@ createButton.addEventListener("click", () => {
       });
   }
 });
+
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
