@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
+const editPostButton = document.querySelector(".edit");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
@@ -16,24 +17,26 @@ logout.addEventListener("click", () => {
 
 let cardData = [];
 
-
-createPostButton.addEventListener("click", () => {    
+createPostButton.addEventListener("click", () => {
   location.href = "/create/create.html";
 });
 
-homeButton.addEventListener("click", () => {    
+editPostButton.addEventListener("click", () => {
+  location.href = "/update/update.html";
+});
+
+homeButton.addEventListener("click", () => {
   location.href = "/feed/feed.html";
 });
 
-profileButton.addEventListener("click", () => {    
+profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-
-const createPosts = (array) => {
+const createPosts = array => {
   container.innerHTML = "";
 
-  array.forEach((cardObj) => {
+  array.forEach(cardObj => {
     const { content, image } = cardObj;
     const id = cardObj.postId;
 
@@ -62,12 +65,12 @@ window.addEventListener("load", () => {
         authorization: token,
       },
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         cardData = data.data;
         createPosts(data.data);
       })
-      .catch((err) => {
+      .catch(err => {
         alert("Error Fetching data");
         console.log(err);
       });
