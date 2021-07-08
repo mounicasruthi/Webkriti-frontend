@@ -1,10 +1,10 @@
-
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
-// const editPostButton = document.querySelector(".edit");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
+//  const editPostButton = document.querySelector(".edit");
+
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
 // const apiUrl = "http://localhost:8000";
@@ -38,12 +38,16 @@ profileButton.addEventListener("click", () => {
 
 
 
+
 const createPosts = (array) => {
   container.innerHTML = "";
 
-
+  
   
   array.forEach((cardObj) => {
+
+   
+
     const { name, content, image, likes } = cardObj;
           
       const id = cardObj.postId;
@@ -55,10 +59,11 @@ const createPosts = (array) => {
       const insideHtml = `<div class="card-header"><div class="left-section">
       <img class="pfpp" src="https://robohash.org/${id}" alt="" />
     <div class="name">${name}</div></div><div class="right-section"><div class="like">${likes}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div><img class="edit" src="../assets/svg/editbutton.svg" alt="editButton"/></div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
       card.innerHTML = insideHtml;
 
       container.appendChild(card);
+    
     
   });
 };

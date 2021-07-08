@@ -3,6 +3,7 @@ const createPostButton = document.querySelector(".create");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
+const likeButton = document.querySelector(".like");
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
 // const apiUrl = "http://localhost:8000";
@@ -12,6 +13,28 @@ const token = localStorage.getItem("jwt");
 logout.addEventListener("click", () => {
   localStorage.removeItem("jwt");
   location.href = "/";
+});
+
+likeButton.addEventListener("click", () => {
+  if (token) {
+    fetch(`${apiUrl}/posts/likes/:postId`, {
+      method: "POST",
+      headers: {
+        authorization: token,
+      },
+      body: JSON.stringify({
+        userId, postId
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+       
+      })
+      .catch((err) => {
+        alert("Error updating like count");
+        console.log(err);
+      });
+  }
 });
 
 let cardData = [];
