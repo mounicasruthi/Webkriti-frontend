@@ -183,6 +183,16 @@ nav li {
   align-items: center;
 }
 
+.pfpp {
+  border-radius: 50%;
+  background-color: #ebe691;
+  border: 1px solid #D5AF2F;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  margin-left: 4px;
+}
+
 .name {
   text-align: center;
   justify-content: center;

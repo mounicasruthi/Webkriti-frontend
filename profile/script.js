@@ -1,18 +1,3 @@
-window.onload = choosePfp;
-
-const pfp = new Array(
-  "/assets/images/cat.png",
-  "/assets/images/lion.png",
-  "/assets/images/owl.png",
-  "/assets/images/panda.png",
-  "/assets/images/penguin.png",
-  "/assets/images/rabbit.png"
-);
-
-function choosePfp() {
-  const randomNum = Math.floor(Math.random() * pfp.length);
-  document.getElementById("pfpImg").src = pfp[randomNum];
-}
 
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
@@ -30,6 +15,8 @@ logout.addEventListener("click", () => {
   localStorage.removeItem("jwt");
   location.href = "/";
 });
+
+document.getElementById("pfpImg").src = `https://robohash.org/1`;
 
 let cardData = [];
 
@@ -49,27 +36,33 @@ profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
+
+
 const createPosts = (array) => {
   container.innerHTML = "";
 
+
+  
   array.forEach((cardObj) => {
     const { name, content, image } = cardObj;
-    console.log(cardObj);
-      
+          
       const id = cardObj.postId;
 
       const card = document.createElement("div");
       card.classList.add("card");
       card.id = id;
 
-      const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
+      const insideHtml = `<div class="card-header"><div class="left-section">
+      <img class="pfpp" src="https://robohash.org/${id}" alt="" />
+    <div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
       card.innerHTML = insideHtml;
 
       container.appendChild(card);
     
   });
 };
+
 
 
 const body = document.querySelector("body");
