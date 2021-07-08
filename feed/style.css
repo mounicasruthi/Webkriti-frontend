@@ -145,7 +145,8 @@ nav li {
 
 .card-main {
   /* width: 700px; */
-  width: 90%;
+  min-width: 90%;
+  /* width: 90%; */
   height: auto;
   background-color: #dad8d8;
   border-radius: 20px;
