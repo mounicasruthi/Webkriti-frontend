@@ -33,9 +33,10 @@ const createPosts = array => {
 
   array.forEach((cardObj1, cardObj2) => {
     const { content, image } = cardObj1;
-
+    cardObj1.content = cardObj2;
+    
     if(!image){
-      const { content } = cardObj2;
+     
       const id = cardObj2.postId;
 
     const card = document.createElement("div");

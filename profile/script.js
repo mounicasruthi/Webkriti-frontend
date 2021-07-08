@@ -1,13 +1,18 @@
 window.onload = choosePfp;
 
-
-const pfp = new Array("/assets/images/cat.png","/assets/images/lion.png", "/assets/images/owl.png");
+const pfp = new Array(
+  "/assets/images/cat.png",
+  "/assets/images/lion.png",
+  "/assets/images/owl.png",
+  "/assets/images/panda.png",
+  "/assets/images/penguin.png",
+  "/assets/images/rabbit.png"
+);
 
 function choosePfp() {
-     const randomNum = Math.floor(Math.random() * pfp.length);
-     document.getElementById("pfpImg").src = pfp[randomNum];
+  const randomNum = Math.floor(Math.random() * pfp.length);
+  document.getElementById("pfpImg").src = pfp[randomNum];
 }
-
 
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
@@ -44,39 +49,37 @@ profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-const createPosts = array => {
+const createPosts = (array) => {
   container.innerHTML = "";
 
   array.forEach((cardObj1, cardObj2) => {
     const { content, image } = cardObj1;
+    cardObj1.content = cardObj2;
 
-    if(!image){
-      const { content } = cardObj2;
+    if (!image) {
       const id = cardObj2.postId;
 
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.id = id;
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.id = id;
       const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">{username}</div></div><div class="right-section"><div class="like">{like-count}
     </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p></div>`; //add username and like-count
 
-    
-    card.innerHTML = insideHtml;
+      card.innerHTML = insideHtml;
 
-    container.appendChild(card);
-    }
-    else{
+      container.appendChild(card);
+    } else {
       const id = cardObj1.postId;
 
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.id = id;
-    
-    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">{username}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="postImg"/></div>`; //add username and like-count
-    card.innerHTML = insideHtml;
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.id = id;
 
-    container.appendChild(card);  
+      const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">{username}</div></div><div class="right-section"><div class="like">{like-count}
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="postImg"/></div>`; //add username and like-count
+      card.innerHTML = insideHtml;
+
+      container.appendChild(card);
     }
   });
 };
@@ -93,12 +96,12 @@ window.addEventListener("load", () => {
         authorization: token,
       },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         cardData = data.data;
         createPosts(data.data);
       })
-      .catch(err => {
+      .catch((err) => {
         alert("Error Fetching data");
         console.log(err);
       });
@@ -112,4 +115,3 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-
