@@ -7,6 +7,8 @@ const form = document.querySelector("form");
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
 
+// const apiUrl = "http://localhost:8000";
+
 const token = localStorage.getItem("jwt");
 
 
