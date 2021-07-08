@@ -47,9 +47,9 @@ profileButton.addEventListener("click", () => {
 const createPosts = array => {
   container.innerHTML = "";
 
-  array.forEach(cardObj => {
+  array.forEach((cardObj1, cardObj2) => {
     const { content, image } = cardObj1;
-    
+
     if(!image){
       const { content } = cardObj2;
       const id = cardObj2.postId;
