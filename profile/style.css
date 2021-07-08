@@ -53,7 +53,7 @@ nav li {
 }
 
 .image1,
-.image4,
+/* .image4, */
 .image3 {
   height: 35px;
 }
@@ -62,7 +62,7 @@ nav li {
 }
 
 .image1:hover,
-.image4:hover,
+/* .image4:hover, */
 .image2:hover,
 .image3:hover {
   transform: scale(1.1);
@@ -261,11 +261,13 @@ nav li {
   font-size: 20px;
 }
 
-.icon {
+.icon,
+.editicon {
   height: 30px;
 }
 
-.icon > img {
+.icon > img,
+.editicon > img {
   height: 100%;
   width: 100%;
 }

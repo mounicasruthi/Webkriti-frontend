@@ -29,8 +29,8 @@ profileButton.addEventListener("click", () => {
 
 
 createButton.addEventListener("click", () => {
-  const content = document.querySelector(".post-content").value;
-  const image = document.querySelector(".post-image").value;
+  const content = document.querySelector(".text-content").value;
+  const image = document.querySelector(".image-content-input").value;
 
   if (token) {
     fetch(`${apiUrl}/posts/create`, {

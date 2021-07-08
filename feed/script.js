@@ -16,55 +16,40 @@ logout.addEventListener("click", () => {
 
 let cardData = [];
 
-createPostButton.addEventListener("click", () => {    
+createPostButton.addEventListener("click", () => {
   location.href = "/create/create.html";
 });
 
-homeButton.addEventListener("click", () => {    
+homeButton.addEventListener("click", () => {
   location.href = "/feed/feed.html";
 });
 
-profileButton.addEventListener("click", () => {    
+profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-const createPosts = array => {
+const createPosts = (array) => {
   container.innerHTML = "";
 
-  array.forEach((cardObj1, cardObj2) => {
-    const { name, content, image } = cardObj1;
-    cardObj1.content = cardObj2;
-    
-    if(!image){
-     
-      const id = cardObj2.postId;
+  array.forEach((cardObj) => {
+    const { name, content, image } = cardObj;
+    console.log(cardObj);
+      
+      const id = cardObj.postId;
 
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.id = id;
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.id = id;
+
       const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p></div>`; //add username and like-count
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count
+      card.innerHTML = insideHtml;
 
+      container.appendChild(card);
     
-    card.innerHTML = insideHtml;
-
-    container.appendChild(card);
-    }
-    else{
-      const id = cardObj1.postId;
-
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.id = id;
-    
-    const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="postImg"/></div>`; //add username and like-count
-    card.innerHTML = insideHtml;
-
-    container.appendChild(card);  
-    }
   });
-}
+};
+
 
 const body = document.querySelector("body");
 
@@ -80,6 +65,7 @@ window.addEventListener("load", () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         cardData = data.data;
         createPosts(data.data);
       })
