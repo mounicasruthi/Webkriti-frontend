@@ -55,8 +55,14 @@ const createPosts = array => {
     card.classList.add("card");
     card.id = id;
 
+    if(image) {
     const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">{username}</div></div><div class="right-section"><div class="like">{like-count}
     </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="postImg"/></div>`; //add username and like-count
+    }
+    else {
+      const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">{username}</div></div><div class="right-section"><div class="like">{like-count}
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p></div>`; //add username and like-count
+    }
 
     card.innerHTML = insideHtml;
 
