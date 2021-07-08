@@ -1,3 +1,14 @@
+window.onload = choosePfp;
+
+
+const pfp = new Array("/assets/images/cat.png","/assets/images/lion.png", "/assets/images/owl.png");
+
+function choosePfp() {
+     const randomNum = Math.floor(Math.random() * pfp.length);
+     document.getElementById("pfpImg").src = pfp[randomNum];
+}
+
+
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
 const homeButton = document.querySelector(".home");
@@ -81,3 +92,4 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+

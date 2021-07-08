@@ -49,7 +49,7 @@ body {
 }
 
 .tagline {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-family: "Gilroy Light", sans-serif;
   /*display:flex;*/
   margin: auto;
@@ -74,7 +74,7 @@ body {
 
 .next {
   display: flex;
-  width: 700px;
+  width: 500px;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
