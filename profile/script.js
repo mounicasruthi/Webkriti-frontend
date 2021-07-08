@@ -16,7 +16,7 @@ function choosePfp() {
 
 const container = document.querySelector(".container");
 const createPostButton = document.querySelector(".create");
-const editPostButton = document.querySelector(".edit");
+// const editPostButton = document.querySelector(".edit");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
@@ -37,9 +37,9 @@ createPostButton.addEventListener("click", () => {
   location.href = "/create/create.html";
 });
 
-editPostButton.addEventListener("click", () => {
-  location.href = "/update/update.html";
-});
+// editPostButton.addEventListener("click", () => {
+//   location.href = "/update/update.html";
+// });
 
 homeButton.addEventListener("click", () => {
   location.href = "/feed/feed.html";
@@ -63,7 +63,7 @@ const createPosts = (array) => {
       card.id = id;
 
       const insideHtml = `<div class="card-header"><div class="left-section"><span class="dot"></span><div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div><div class="editicon"><img src="../assets/svg/editbutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
       card.innerHTML = insideHtml;
 
       container.appendChild(card);
@@ -76,7 +76,6 @@ const body = document.querySelector("body");
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
-
   if (token) {
     fetch(`${apiUrl}/posts/getposts`, {
       method: "GET",
