@@ -66,6 +66,7 @@ nav li {
 .image2:hover,
 .image3:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .logOut {
@@ -283,6 +284,16 @@ nav li {
 .editicon > img {
   height: 100%;
   width: 100%;
+}
+
+.edit {
+  height: 30px;
+  padding-right: 3px;
+}
+
+.edit:hover, .icon:hover {
+  cursor: pointer;
+  transform: scale(1.04);
 }
 
 .left-section {

@@ -1,7 +1,6 @@
 const container = document.querySelector(".container");
 // const container2 = document.querySelector(".container2");
 const createPostButton = document.querySelector(".create");
-// const editPostButton = document.querySelector(".edit");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");

@@ -1,7 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
 const updateButton = document.querySelector(".submit-button");
-const updatePostButton = document.querySelector(".createbtn");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
@@ -32,22 +31,22 @@ updateButton.addEventListener("click", () => {
   const image = document.querySelector(".post-image").value;
 
   if (token) {
-    fetch(`${apiUrl}/note/update/${postId}`, {
+    fetch(`${apiUrl}/posts/update/${postId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         authorization: token,
       },
-      body: JSON.stringify({ content, image }),
+      body: formData,
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          location.href = "/pages/dashboard/dashboard.html";
+          location.href = "/profile/profile.html";
         }
       })
       .catch((err) => {
-        alert("Could not edit note. Please try again.");
+        alert("Could not update post. Please try again.");
         console.log(err);
       });
   }
