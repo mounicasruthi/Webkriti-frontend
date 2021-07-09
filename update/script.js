@@ -63,6 +63,7 @@ deleteButton.addEventListener("click", () => {
         "Content-Type": "application/json",
         authorization: token,
       },
+      body: JSON.stringify({ postId }),
     })
       .then((res) => res.json())
       .then((data) => {
