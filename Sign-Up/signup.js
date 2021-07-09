@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 
-// const apiUrl = "https://connectup-backend.herokuapp.com";
-const apiUrl = "http://localhost:8000";
+const apiUrl = "https://connectup-backend.herokuapp.com";
+// const apiUrl = "http://localhost:8000";
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
 const signUpForm = document.querySelector(".signup-form");
 
-signUpForm.addEventListener("submit", (event) => {
+signUpForm.addEventListener("submit", event => {
   event.preventDefault();
 
   const email = document.querySelector(".signup-email").value;
@@ -46,8 +46,8 @@ signUpForm.addEventListener("submit", (event) => {
     },
     body: JSON.stringify({ username, email, password }),
   })
-    .then((res) => res.json())
-    .then((data) => {
+    .then(res => res.json())
+    .then(data => {
       const { token } = data;
       console.log(data);
 
@@ -58,7 +58,7 @@ signUpForm.addEventListener("submit", (event) => {
         alert("Please sign up again");
       }
     })
-    .catch((err) => {
+    .catch(err => {
       alert("There was an error in sign up, please retry");
       console.log(err);
     });

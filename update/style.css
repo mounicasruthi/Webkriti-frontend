@@ -1,331 +1,332 @@
 * {
-    margin: 0;
-    padding: 0;
-    color: #4e9c64;
-    box-sizing: border-box;
-    font-family: "Gilroy", sans-serif;
-  }
-  
-  @font-face {
-    font-family: "Gilroy";
-    src: url("../assets/fonts/Gilroy-Light.otf");
-  }
-  @font-face {
-    font-family: "Gilroy Dark";
-    src: url("../assets/fonts/Gilroy-ExtraBold.otf");
-  }
-  @font-face {
-    font-family: "Gilroy Semi-Bold";
-    src: url("../assets/fonts/Gilroy-SemiBold.ttf");
-  }
-  
-  body {
-    min-height: 100vh;
-    width: 100%;
-    background-image: url("../assets/illustrations/background.svg");
-    background-repeat: no-repeat;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center center;
-  }
-  
-  nav {
-    padding: 0px;
-    background: #e5e5e5;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 70px;
-    z-index: 2;
-  }
-  
+  margin: 0;
+  padding: 0;
+  color: #4e9c64;
+  box-sizing: border-box;
+  font-family: "Gilroy", sans-serif;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../assets/fonts/Gilroy-Light.otf");
+}
+@font-face {
+  font-family: "Gilroy Dark";
+  src: url("../assets/fonts/Gilroy-ExtraBold.otf");
+}
+@font-face {
+  font-family: "Gilroy Semi-Bold";
+  src: url("../assets/fonts/Gilroy-SemiBold.ttf");
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/illustrations/background.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+
+nav {
+  padding: 0px;
+  background: #e5e5e5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 2;
+}
+
+nav ul {
+  float: right;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy";
+}
+
+nav li {
+  padding-top: 15px;
+  display: inline-block;
+  line-height: 56px;
+  margin: 0 15px;
+}
+
+.image1,
+.image4,
+.image3 {
+  height: 35px;
+}
+.image2 {
+  height: 40px;
+}
+
+.image1:hover,
+.image4:hover,
+.image2:hover,
+.image3:hover {
+  transform: scale(1.1);
+}
+
+.logOut {
+  cursor: pointer;
+  font-family: "Gilroy Semi-Bold";
+  text-align: center;
+  font-size: 20px;
+  color: #e5e5e5;
+  background: #4e9c64;
+  border-radius: 30px;
+  height: 35px;
+  width: 150px;
+  border: none;
+  padding: 5px;
+  position: relative;
+  margin-top: 15px;
+  margin-right: 20px;
+  align-items: center;
+  float: right;
+  z-index: 0;
+}
+
+.logOut:hover,
+.logOut:focus {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+.submit-button {
+  cursor: pointer;
+  font-family: "Gilroy Semi-Bold";
+  text-align: center;
+  font-size: 20px;
+  color: #e5e5e5;
+  background: #4e9c64;
+  border-radius: 30px;
+  height: 35px;
+  width: 150px;
+  border: none;
+  padding: 5px;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+.btn {
+  display: none;
+  padding: 0px 10px 0px 20px;
+  position: relative;
+  margin-top: 15px;
+  margin-right: 20px;
+  align-items: center;
+  float: right;
+  z-index: 0;
+}
+
+.logo {
+  float: left;
+  margin: 15px 0px 15px 30px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Gilroy Dark";
+}
+
+.logo2 {
+  flex: 1;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Gilroy Dark";
+}
+
+.card-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60%;
+  height: 350px;
+  transform: translate(-50%, -50%);
+  background-color: #dad8d8;
+  border-radius: 20px;
+  margin: auto;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.text-content {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  padding: 0;
+  background-color: #eee3e3;
+  border-radius: 20px 20px 0px 0px;
+  padding: 10px;
+  font-family: "Gilroy Semi-Bold";
+  border-style: none;
+  word-break: break-word;
+}
+
+.text-content:hover,
+.text-content:focus {
+  outline: none;
+}
+
+.image-content-input {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.image-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+}
+
+.image-content:hover {
+  cursor: pointer;
+}
+
+.cam-text {
+  font-size: 29px;
+  font-family: "Gilroy Semi-Bold";
+  padding: 0px;
+  text-align: center;
+  margin-top: -13px;
+}
+
+.image-cam {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-button {
+  width: 25%;
+  background: #4e9c64;
+  color: #000;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Gilroy Dark";
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media (max-width: 1100px) {
   nav ul {
-    float: right;
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    font-family: "Gilroy";
-  }
-  
-  nav li {
-    padding-top: 15px;
-    display: inline-block;
-    line-height: 56px;
-    margin: 0 15px;
-  }
-  
-  .image1,
-  .image3 {
-    height: 35px;
-  }
-  .image2 {
-    height: 40px;
-  }
-  
-  .image1:hover,
-  .image2:hover,
-  .image3:hover {
-    transform: scale(1.1);
-  }
-  
-  .logOut {
-    cursor: pointer;
-    font-family: "Gilroy Semi-Bold";
-    text-align: center;
-    font-size: 20px;
-    color: #e5e5e5;
-    background: #4e9c64;
-    border-radius: 30px;
-    height: 35px;
-    width: 150px;
-    border: none;
-    padding: 5px;
-    position: relative;
-    margin-top: 15px;
-    margin-right: 20px;
-    align-items: center;
-    float: right;
-    z-index: 0;
-  }
-  
-  .logOut:hover,
-  .logOut:focus {
-    transform: scale(1.02);
-    transition: transform 0.2s;
-  }
-  
-  .submit-button {
-    cursor: pointer;
-    font-family: "Gilroy Semi-Bold";
-    text-align: center;
-    font-size: 20px;
-    color: #e5e5e5;
-    background: #4e9c64;
-    border-radius: 30px;
-    height: 35px;
-    width: 150px;
-    border: none;
-    padding: 5px;
-  }
-  
-  .submit-button:hover,
-  .submit-button:focus {
-    transform: scale(1.02);
-    transition: transform 0.2s;
-  }
-  
-  .btn {
-    display: none;
-    padding: 0px 10px 0px 20px;
-    position: relative;
-    margin-top: 15px;
-    margin-right: 20px;
-    align-items: center;
-    float: right;
-    z-index: 0;
-  }
-  
-  .logo {
-    float: left;
-    margin: 15px 0px 15px 30px;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: "Gilroy Dark";
-  }
-  
-  .logo2 {
-    flex: 1;
-    font-size: 30px;
-    font-weight: 700;
-    color: #000000;
-    font-family: "Gilroy Dark";
-  }
-  
-  .card-main {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 60%;
-    height: 350px;
-    transform: translate(-50%, -50%);
-    background-color: #dad8d8;
-    border-radius: 20px;
-    margin: auto;
-    border: 1px solid #000;
-    color: #000;
-  }
-  
-  .text-content {
-    width: 100%;
-    height: 100px;
-    border-bottom: 1px solid #000;
-    margin: 0;
-    padding: 0;
-    background-color: #eee3e3;
-    border-radius: 20px 20px 0px 0px;
-    padding: 10px;
-    font-family: "Gilroy Semi-Bold";
-    border-style: none;
-    word-break: break-word;
-  }
-  
-  .text-content:hover,
-  .text-content:focus {
-    outline: none;
-  }
-  
-  .image-content-input {
-    visibility: hidden;
-    width: 0;
-    height: 0;
-  }
-  
-  .image-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -20%);
-    text-align: center;
-  }
-  
-  .image-content:hover {
-    cursor: pointer;
-  }
-  
-  .cam-text {
-    font-size: 29px;
-    font-family: "Gilroy Semi-Bold";
-    padding: 0px;
-    text-align: center;
-    margin-top: -13px;
-  }
-  
-  .image-cam {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .post-button {
-    width: 25%;
-    background: #4e9c64;
-    color: #000;
-    padding: 10px;
-    border-radius: 15px;
-    border: 1px solid white;
-    cursor: pointer;
-    margin-left: 15px;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 0;
     position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    width: 40%;
+    height: 100vh;
+    top: 60px;
+    left: 100%;
+    text-align: center;
+    background-color: #2c3e50;
+    transition: all 1s;
   }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    font-family: "Gilroy Dark";
-    color: #818181;
+  nav ul li {
     display: block;
-    transition: 0.3s;
   }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
+  nav ul li a {
+    font-size: 20px;
+    color: #4e9c64;
   }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  .btn {
+    padding-right: 10px;
+    display: block;
   }
-  
-  @media (max-width: 1100px) {
-    nav ul {
-      position: fixed;
-      width: 40%;
-      height: 100vh;
-      top: 60px;
-      left: 100%;
-      text-align: center;
-      background-color: #2c3e50;
-      transition: all 1s;
-    }
-    nav ul li {
-      display: block;
-    }
-    nav ul li a {
-      font-size: 20px;
-      color: #4e9c64;
-    }
-    .btn {
-      padding-right: 10px;
-      display: block;
-    }
-  
-    .logOut {
-      float: right;
-      margin-left: 30px;
-  
-      width: 200px;
-      margin-top: 20px;
-    }
+
+  .logOut {
+    float: right;
+    margin-left: 30px;
+
+    width: 200px;
+    margin-top: 20px;
   }
-  
-  @media screen and (max-width: 680px) {
-    .cam-text {
-      font-size: 24px;
-    }
-    .image-content {
-      size: 16px;
-    }
+}
+
+@media screen and (max-width: 680px) {
+  .cam-text {
+    font-size: 24px;
   }
-  
-  @media screen and (max-width: 550px) {
-    .logo {
-      display: none;
-    }
-  
-    .logOut {
-      float: left;
-      margin-left: 30px;
-      width: 200px;
-      margin-top: 20px;
-    }
+  .image-content {
+    size: 16px;
   }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
+}
+
+@media screen and (max-width: 550px) {
+  .logo {
+    display: none;
   }
-  
-  @media screen and (max-width: 400px) {
-    .logo {
-      display: none;
-    }
-  
-    .logOut {
-      float: left;
-      margin-left: 30px;
-      width: 150px;
-      margin-top: 20px;
-    }
+
+  .logOut {
+    float: left;
+    margin-left: 30px;
+    width: 200px;
+    margin-top: 20px;
   }
-  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .logo {
+    display: none;
+  }
+
+  .logOut {
+    float: left;
+    margin-left: 30px;
+    width: 150px;
+    margin-top: 20px;
+  }
+}

@@ -5,8 +5,8 @@ const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 const likeButton = document.querySelector(".like");
 
-// const apiUrl = "https://connectup-backend.herokuapp.com";
-const apiUrl = "http://localhost:8000";
+const apiUrl = "https://connectup-backend.herokuapp.com";
+// const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -23,13 +23,12 @@ likeButton.addEventListener("click", () => {
         authorization: token,
       },
       body: JSON.stringify({
-        userId, postId
-      })
+        userId,
+        postId,
+      }),
     })
       .then((res) => res.json())
-      .then((data) => {
-       
-      })
+      .then((data) => {})
       .catch((err) => {
         alert("Error updating like count");
         console.log(err);
@@ -86,9 +85,7 @@ window.addEventListener("load", () => {
   if (token) {
     fetch(`${apiUrl}/posts/getallposts`, {
       method: "GET",
-      headers: {
-        authorization: token,
-      },
+      headers: {},
     })
       .then((res) => res.json())
       .then((data) => {

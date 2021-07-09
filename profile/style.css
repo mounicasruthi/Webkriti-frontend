@@ -122,7 +122,8 @@ nav li {
   font-family: "Gilroy Dark";
 }
 
-.container, .container2 {
+.container,
+.container2 {
   margin-top: 70px;
   width: 70%;
   display: flex;
@@ -141,7 +142,7 @@ nav li {
   padding-bottom: 10px;
 }
 
-.container{
+.container {
   padding-top: 10px;
   margin-top: 30px;
 }
@@ -170,7 +171,6 @@ nav li {
   font-family: "Gilroy Semi-Bold";
   font-size: 18px;
 }
-
 
 #pfpImg {
   width: 135px;
@@ -216,10 +216,7 @@ nav li {
   background-color: #dad8d8;
   border-radius: 20px;
   border: 1px solid #000;
-  color: #000; 
-
-   
-
+  color: #000;
 }
 
 .card-header {
@@ -245,9 +242,7 @@ nav li {
   margin: 10px 0px 00px 10px;
   justify-content: center;
   align-items: center;
-  
 }
-
 
 .pfpp {
   border-radius: 50%;
@@ -276,12 +271,12 @@ nav li {
 }
 
 .icon,
-.editicon {
+.updateicon {
   height: 30px;
 }
 
 .icon > img,
-.editicon > img {
+.updateicon > img {
   height: 100%;
   width: 100%;
 }
@@ -291,7 +286,8 @@ nav li {
   padding-right: 3px;
 }
 
-.edit:hover, .icon:hover {
+.updateicon:hover,
+.icon:hover {
   cursor: pointer;
   transform: scale(1.04);
 }

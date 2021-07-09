@@ -17,7 +17,6 @@ logout.addEventListener("click", () => {
 });
 
 
-
 let cardData = [];
 
 createPostButton.addEventListener("click", () => {
@@ -91,7 +90,6 @@ createPostButton.addEventListener("click", () => {
 //     })
   
 // };
-
 
 
 const body = document.querySelector("body");

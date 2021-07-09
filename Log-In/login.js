@@ -41,7 +41,7 @@ signInForm.addEventListener("submit", (event) => {
 
       if (token) {
         localStorage.setItem("jwt", token);
-        location.href = "/profile/profile.html";
+        location.href = "/feed/feed.html";
       } else {
         alert("Please log in again");
       }
