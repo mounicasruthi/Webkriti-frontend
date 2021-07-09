@@ -30,8 +30,8 @@ profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+form.addEventListener("submit", () => {
+  // e.preventDefault();
   
   const textInput = document.querySelector(".text-content");
   const fileInput = document.querySelector(".image-content-input");
@@ -47,10 +47,16 @@ form.addEventListener("submit", (e) => {
     
   })
   .then(res => res.json())
-  .then(data => {console.log(data);
-  location.href = "/feed/feed.html";
+  .then((data) => {
+    if (data.message) {
+      // console.log("okay");
+      location.href = "/feed/feed.html";
+    }
   })
-  .catch(err => console.log(err));
+  .catch((err) => {
+    alert("Could not create post. Please try again.");
+    console.log(err);
+  });
 })
 
 
