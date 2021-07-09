@@ -33,6 +33,9 @@ updateButton.addEventListener("click", () => {
   const content = document.querySelector(".text-content").value;
   // const image = document.querySelector(".image-content-input").value;
 
+
+  
+
   if (token) {
     fetch(`${apiUrl}/posts/update/${postId}`, {
       method: "PUT",
@@ -40,12 +43,13 @@ updateButton.addEventListener("click", () => {
         "Content-Type": "application/json",
         authorization: token,
       },
-      body: JSON.stringify({ content }),
+      body: JSON.stringify({ content, postId }),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          location.href = "/profile/profile.html";
+          console.log("okay");
+          // location.href = "/profile/profile.html";
         }
       })
       .catch((err) => {
