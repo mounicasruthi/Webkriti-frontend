@@ -47,8 +47,16 @@ form.addEventListener("submit", (e) => {
     
   })
   .then(res => res.json())
-  .then(data => {})
-  .catch(err => {});
+  .then((data) => {
+    if (data.message) {
+      alert("Post created successfully!")
+      location.href = "/feed/feed.html";
+    }
+  })
+  .catch((err) => {
+    alert("Could not create post. Please try again.");
+   
+  });
 })
 
 

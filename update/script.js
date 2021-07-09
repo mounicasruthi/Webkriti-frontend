@@ -72,6 +72,7 @@ deleteButton.addEventListener("click", () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
+          alert("Post updated successfully!")
           location.href = "/profile/profile.html";
         }
       })
