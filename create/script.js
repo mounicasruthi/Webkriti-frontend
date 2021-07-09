@@ -47,9 +47,9 @@ form.addEventListener("submit", (e) => {
     
   })
   .then(res => res.json())
-  .then(data => console.log(data);
+  .then(data => {console.log(data);
   location.href = "/feed/feed.html";
-  )
+  })
   .catch(err => console.log(err));
 })
 
