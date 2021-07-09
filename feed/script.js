@@ -85,9 +85,7 @@ window.addEventListener("load", () => {
   if (token) {
     fetch(`${apiUrl}/posts/getallposts`, {
       method: "GET",
-      headers: {
-        authorization: token,
-      },
+      headers: {},
     })
       .then((res) => res.json())
       .then((data) => {

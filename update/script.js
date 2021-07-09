@@ -1,14 +1,14 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
 const updateButton = document.querySelector(".submit-button");
-const deleteButton = document.querySelector(".deletebtn");
+const deleteButton = document.querySelector(".delete");
 const homeButton = document.querySelector(".home");
 const createPostButton = document.querySelector(".create");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -40,7 +40,7 @@ updateButton.addEventListener("click", () => {
         "Content-Type": "application/json",
         authorization: token,
       },
-      body: formData,
+      body: JSON.stringify({ content }),
     })
       .then((res) => res.json())
       .then((data) => {
