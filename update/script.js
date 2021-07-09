@@ -7,8 +7,8 @@ const createPostButton = document.querySelector(".create");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -37,7 +37,7 @@ updateButton.addEventListener("click", () => {
   
 
   if (token) {
-    fetch(`${apiUrl}/posts/update/${postId}`, {
+    fetch(`${apiUrl}/posts/update/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -48,8 +48,8 @@ updateButton.addEventListener("click", () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          console.log("okay");
-          // location.href = "/profile/profile.html";
+          // console.log("okay");
+          location.href = "/profile/profile.html";
         }
       })
       .catch((err) => {

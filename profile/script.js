@@ -8,8 +8,8 @@ const logout = document.querySelector(".logOut");
 // const updatePostButton = document.querySelector(".updateicon");
 const name = document.querySelector(".name");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -102,7 +102,9 @@ const createPosts = (array) => {
 
     const updateButton = card.querySelector(".updateicon");
     updateButton.addEventListener("click", () => {
-      location.href = "/update/update.html";
+      location.href = `/update/update.html?postId=${id}`;
+      // console.log(id);
+      
     });
 
     container.appendChild(card);
