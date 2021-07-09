@@ -4,8 +4,8 @@ const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 

@@ -6,28 +6,26 @@ const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
-const apiUrl = "https://aasf-final-project-backend.herokuapp.com";
+const apiUrl = "https://connectup-backend.herokuapp.com";
 
 const token = localStorage.getItem("jwt");
 
 logout.addEventListener("click", () => {
-    localStorage.removeItem("jwt");
-    location.href = "/";
-  });
-  
-  
-  createPostButton.addEventListener("click", () => {    
-    location.href = "/create/create.html";
-  });
-  
-  homeButton.addEventListener("click", () => {    
-    location.href = "/feed/feed.html";
-  });
-  
-  profileButton.addEventListener("click", () => {    
-    location.href = "/profile/profile.html";
-  });
-  
+  localStorage.removeItem("jwt");
+  location.href = "/";
+});
+
+createPostButton.addEventListener("click", () => {
+  location.href = "/create/create.html";
+});
+
+homeButton.addEventListener("click", () => {
+  location.href = "/feed/feed.html";
+});
+
+profileButton.addEventListener("click", () => {
+  location.href = "/profile/profile.html";
+});
 
 updateButton.addEventListener("click", () => {
   const content = document.querySelector(".post-content").value;
@@ -55,19 +53,10 @@ updateButton.addEventListener("click", () => {
   }
 });
 
-
-
-
-
-
-
-
-
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
