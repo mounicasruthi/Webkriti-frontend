@@ -5,8 +5,8 @@ const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 const likeButton = document.querySelector(".like");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -27,9 +27,9 @@ likeButton.addEventListener("click", () => {
         postId,
       }),
     })
-      .then(res => res.json())
-      .then(data => {})
-      .catch(err => {
+      .then((res) => res.json())
+      .then((data) => {})
+      .catch((err) => {
         alert("Error updating like count");
         console.log(err);
       });
@@ -50,10 +50,10 @@ profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-const createPosts = array => {
+const createPosts = (array) => {
   container.innerHTML = "";
 
-  array.forEach(cardObj => {
+  array.forEach((cardObj) => {
     const { name, content, image, likes } = cardObj;
     console.log(cardObj);
 
@@ -89,13 +89,13 @@ window.addEventListener("load", () => {
         authorization: token,
       },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
         cardData = data.data;
         createPosts(data.data);
       })
-      .catch(err => {
+      .catch((err) => {
         alert("Error fetching data");
         console.log(err);
       });

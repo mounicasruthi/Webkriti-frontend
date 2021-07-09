@@ -3,6 +3,7 @@ const postId = urlParams.get("postId");
 const updateButton = document.querySelector(".submit-button");
 const deleteButton = document.querySelector(".deletebtn");
 const homeButton = document.querySelector(".home");
+const createPostButton = document.querySelector(".create");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
@@ -41,13 +42,13 @@ updateButton.addEventListener("click", () => {
       },
       body: formData,
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.message) {
           location.href = "/profile/profile.html";
         }
       })
-      .catch(err => {
+      .catch((err) => {
         alert("Could not update post. Please try again.");
         console.log(err);
       });
@@ -63,13 +64,13 @@ deleteButton.addEventListener("click", () => {
         authorization: token,
       },
     })
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.message) {
           location.href = "/profile/profile.html";
         }
       })
-      .catch(err => {
+      .catch((err) => {
         alert("Could not delete post. Please try again.");
         console.log(err);
       });

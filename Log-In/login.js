@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
 const signInForm = document.querySelector(".login-form");
 
-signInForm.addEventListener("submit", event => {
+signInForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const logInEmail = document.querySelector(".login-email");
@@ -35,8 +35,8 @@ signInForm.addEventListener("submit", event => {
     },
     body: JSON.stringify({ email, password }),
   })
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const { token } = data;
 
       if (token) {
@@ -46,7 +46,7 @@ signInForm.addEventListener("submit", event => {
         alert("Please log in again");
       }
     })
-    .catch(err => {
+    .catch((err) => {
       alert("There was an error in log in, please retry");
       console.log(err);
     });
