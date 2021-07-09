@@ -116,10 +116,7 @@ const createPosts = (array) => {
       // console.log(id);
     });
 
-    const updateButton = card.querySelector(".updateicon");
-    updateButton.addEventListener("click", () => {
-      location.href = "/update/update.html";
-    });
+    
 
     container.appendChild(card);
   });
