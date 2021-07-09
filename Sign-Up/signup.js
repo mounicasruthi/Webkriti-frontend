@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 
-const apiUrl = "https://connectup-backend.herokuapp.com";
-// const apiUrl = "http://localhost:8000";
+// const apiUrl = "https://connectup-backend.herokuapp.com";
+const apiUrl = "http://localhost:8000";
 
 window.addEventListener("load", () => {
   body.classList.add("visible");
@@ -13,7 +13,7 @@ signUpForm.addEventListener("submit", event => {
   event.preventDefault();
 
   const email = document.querySelector(".signup-email").value;
-  const username = document.querySelector(".signup-username").value;
+  const name = document.querySelector(".signup-username").value;
   const password = document.querySelector(".signup-password").value;
   const confPassword = document.querySelector(".signup-confpassword").value;
 
@@ -24,7 +24,7 @@ signUpForm.addEventListener("submit", event => {
     return;
   }
 
-  if (username === "") {
+  if (name === "") {
     alert("Please enter a valid name");
     return;
   }
@@ -39,12 +39,13 @@ signUpForm.addEventListener("submit", event => {
     return;
   }
 
+  
   fetch(`${apiUrl}/auth/signup`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username, email, password }),
+    body: JSON.stringify({ name, email, password }),
   })
     .then(res => res.json())
     .then(data => {
