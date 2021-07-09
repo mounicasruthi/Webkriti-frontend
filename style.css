@@ -166,6 +166,7 @@ a:link {
         margin-left:25%;
         font-size:1.5rem;
         font-weight:bold;
+       
     }
 
     .button2{
@@ -178,20 +179,26 @@ a:link {
     }
 } 
 
-/*
-@media screen and (max-width:1300px)
+
+@media screen and (max-width:500px)
 {
-    .text{
-        margin-top:8rem;
-        margin-left:0rem;
-        font-size:5.8rem;
+    .text {
+        font-family: "Gilroy Semi-Bold";
+        font-size: 85px;
+        font-weight: bold;
+        position: center;
+        display: flex;
+        margin: auto;
+        justify-content: center;
         text-align: center;
-    }
+        padding: 80px 0px 0px 0px;
+      }
 
     .tagline{
         text-align: center;
         margin-left:auto;
         margin-top:1rem;
+        font-size: 32px;;
     }
 
 
@@ -200,6 +207,7 @@ a:link {
         margin-left:25%;
         font-size:1.5rem;
         font-weight:bold;
+        
     }
 
     .button2{
@@ -210,152 +218,81 @@ a:link {
     .illustration{
         display:none;
     }
-}
+} 
 
-
-@media screen and (max-width:360px)
+@media screen and (max-width:500px)
 {
-    .text{
-        margin-top:8rem;
-        font-size:5.8rem;
-        text-align:center;
-    }
+    .text {
+        font-family: "Gilroy Semi-Bold";
+        font-size: 85px;
+        font-weight: bold;
+        position: center;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 0px 0px 0px;
+      }
 
     .tagline{
-        text-align:center;
-        margin-top:1rem;
-        margin-left:30%;
-    }
-
-    .button1,.button2{
-        width:50%;
-        margin-left:40%;
-        font-size:1.5rem;
-        font-weight:bold;
-    }
-}
-
-
-@media screen and (width:412px)
-{
-    .text{
-        margin-top:8rem;
-        font-size:5.8rem;
-        text-align:center;
-    }
-
-    .tagline{
-        text-align:center;
-        margin-top:1rem;
-        margin-left:20%;
-    }
-
-    .button1,.button2{
-        width:50%;
-        margin-left:35%;
-        font-size:1.5rem;
-        font-weight:bold;
-    }
-
-}
-
-@media screen and (width:600px)
-{
-    .tagline{
+        text-align: center;
         margin-left:auto;
         margin-top:1rem;
+        font-size: 32px;;
     }
+
 
     .button1, .button2{
         width:50%;
         margin-left:25%;
         font-size:1.5rem;
+        font-weight:bold; 
+    }
+
+    .button2{
+        margin-top:2rem;
+    }
+
+    .illustration{
+        display:none;
+    }
+} 
+
+
+@media screen and (max-width:300px)
+{
+    .text {
+        font-family: "Gilroy Semi-Bold";
+        font-size: 75px;
         font-weight: bold;
-    }
+        position: center;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 0px 0px 0px;
+      }
 
-    .button1{
-        margin-top:4rem;
-    }
-}
-
-@media screen and (width:320px)
-{
-    .tagline{
-        text-align:center;
-        margin-left:4rem;
-        margin-right:-5rem;
-    }
-
-    .button1,.button2{
-        width:50%;
-        margin-left:50%;
-    }
-}
-
-@media screen and (width:768px)
-{
-    .tagline{
-        text-align:center;
-        margin-left:auto;
-        font-size:4rem;
-    }
-
-    .button1,.button2{
-        margin-left:25%;
-        font-size:2rem;
-    }
-
-    .button1{
-        margin-top:4rem;
-        margin-bottom:1rem;
-    }
-}
-
-@media screen and (width:540px)
-{
-    .tagline{
-        margin:auto;
-    }
-
-    .button1,.button2{
-        margin-left:25%;
-    }
-}
-
-@media screen and (width:1024px)
-{
-    .text{
-        font-size:10rem;
-    }
-
-    
-    .tagline{
-        font-size:6rem;
-        text-align:center;
-        margin:auto;
-    }
-
-    .button1,.button2{
-        margin-left:25%;
-        font-size:2rem;
-    }
-  
-    .button1{
-        margin-top:5rem;
-        margin-bottom:1rem;
-    }
-}
-
-@media screen and (width:280px)
-{
     .tagline{
         text-align: center;
-        margin-left:2rem;
-        margin-right:-10rem;
+        margin-left:auto;
+        margin-top:1rem;
+        font-size: 28px;;
     }
-    .button1,.button2{
-        width:100%;
-        margin-left:40%;
+
+
+    .button1, .button2{
+        width:50%;
+        margin-left:25%;
+        font-size:1.5rem;
+        font-weight:bold; 
     }
-}
-*/
+
+    .button2{
+        margin-top:2rem;
+    }
+
+    .illustration{
+        display:none;
+    }
+} 
