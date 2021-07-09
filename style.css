@@ -24,8 +24,9 @@ body {
 }
 
 .text {
-  font-family: Poppins, sans-serif;
+  font-family: "Gilroy Semi-Bold";
   font-size: 7.5rem;
+  
   font-weight: bold;
   position: center;
   display: flex;
@@ -137,6 +138,44 @@ a:link {
     margin-right: 3rem;
 }
 */
+
+/* @media screen and (max-width:700px)
+{
+    .text {
+        font-family: "Gilroy Semi-Bold";
+        font-size: 90px;
+        font-weight: bold;
+        position: center;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 0px 0px 0px;
+      }
+
+    .tagline{
+        text-align: center;
+        margin-left:auto;
+        margin-top:1rem;
+    }
+
+
+    .button1, .button2{
+        width:50%;
+        margin-left:25%;
+        font-size:1.5rem;
+        font-weight:bold;
+    }
+
+    .button2{
+        margin-top:2rem;
+    }
+    
+
+    .illustration{
+        display:none;
+    }
+} */
 
 /*
 @media screen and (max-width:1300px)
