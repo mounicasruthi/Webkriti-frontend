@@ -1,11 +1,13 @@
 const urlParams = new URLSearchParams(window.location.search);
 const postId = urlParams.get("postId");
 const updateButton = document.querySelector(".submit-button");
+const deleteButton = document.querySelector(".deletebtn");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
 
 const apiUrl = "https://connectup-backend.herokuapp.com";
+// const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -27,8 +29,8 @@ profileButton.addEventListener("click", () => {
 });
 
 updateButton.addEventListener("click", () => {
-  const content = document.querySelector(".post-content").value;
-  const image = document.querySelector(".post-image").value;
+  const content = document.querySelector(".text-content").value;
+  // const image = document.querySelector(".image-content-input").value;
 
   if (token) {
     fetch(`${apiUrl}/posts/update/${postId}`, {
@@ -39,14 +41,36 @@ updateButton.addEventListener("click", () => {
       },
       body: formData,
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         if (data.message) {
           location.href = "/profile/profile.html";
         }
       })
-      .catch((err) => {
+      .catch(err => {
         alert("Could not update post. Please try again.");
+        console.log(err);
+      });
+  }
+});
+
+deleteButton.addEventListener("click", () => {
+  if (token) {
+    fetch(`${apiUrl}/delete/${postId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: token,
+      },
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.message) {
+          location.href = "/profile/profile.html";
+        }
+      })
+      .catch(err => {
+        alert("Could not delete post. Please try again.");
         console.log(err);
       });
   }

@@ -4,10 +4,11 @@ const createPostButton = document.querySelector(".create");
 const homeButton = document.querySelector(".home");
 const profileButton = document.querySelector(".profile");
 const logout = document.querySelector(".logOut");
+const updatePostButton = document.querySelector(".updateicon");
 const username = document.querySelector(".name");
 
-// const apiUrl = "https://connectup-backend.herokuapp.com";
-const apiUrl = "http://localhost:8000";
+const apiUrl = "https://connectup-backend.herokuapp.com";
+// const apiUrl = "http://localhost:8000";
 
 const token = localStorage.getItem("jwt");
 
@@ -26,9 +27,9 @@ createPostButton.addEventListener("click", () => {
   location.href = "/create/create.html";
 });
 
-// editPostButton.addEventListener("click", () => {
-//   location.href = "/update/update.html";
-// });
+updatePostButton.addEventListener("click", () => {
+  location.href = "/update/update.html";
+});
 
 homeButton.addEventListener("click", () => {
   location.href = "/feed/feed.html";
@@ -38,10 +39,10 @@ profileButton.addEventListener("click", () => {
   location.href = "/profile/profile.html";
 });
 
-const userProfile = (array) => {
+const userProfile = array => {
   container2.innerHTML = "";
 
-  array.forEach((cardObj) => {
+  array.forEach(cardObj => {
     const { name } = cardObj;
 
     const email = cardObj.email;
@@ -60,10 +61,10 @@ const userProfile = (array) => {
   });
 };
 
-const createPosts = (array) => {
+const createPosts = array => {
   container.innerHTML = "";
 
-  array.forEach((cardObj) => {
+  array.forEach(cardObj => {
     const { name, content, image } = cardObj;
 
     const id = cardObj.postId;
@@ -75,7 +76,7 @@ const createPosts = (array) => {
     const insideHtml = `<div class="card-header"><div class="left-section">
       <img class="pfpp" src="https://robohash.org/${id}" alt="" />
     <div class="name">${name}</div></div><div class="right-section"><div class="like">{like-count}
-    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
+    </div><div class="icon"><img src="../assets/svg/likebutton.svg"></div> <div class="updateicon"><img src="../assets/svg/updatebutton.svg"></div> </div></div><div class="card-body"><p class="card-caption">${content}</p><img class="post-img" src="${image}" alt="" style={ { display: image ? 'block' : 'none' } }  /></div>`; //add username and like-count; div before card body
     card.innerHTML = insideHtml;
 
     container.appendChild(card);
@@ -93,13 +94,13 @@ window.addEventListener("load", () => {
         authorization: token,
       },
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         cardData = data.data;
         createPosts(data.data);
         userProfile(data.data);
       })
-      .catch((err) => {
+      .catch(err => {
         alert("Error Fetching data");
         console.log(err);
       });
@@ -109,11 +110,11 @@ window.addEventListener("load", () => {
         authorization: token,
       },
     })
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         user = data;
       })
-      .catch((err) => {
+      .catch(err => {
         alert("Error Fetching data");
         console.log(err);
       });
