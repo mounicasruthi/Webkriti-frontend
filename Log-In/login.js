@@ -48,6 +48,6 @@ signInForm.addEventListener("submit", (event) => {
     })
     .catch((err) => {
       alert("There was an error in log in, please retry");
-      console.log(err);
+  
     });
 });

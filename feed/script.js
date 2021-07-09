@@ -18,27 +18,6 @@ logout.addEventListener("click", () => {
   location.href = "/";
 });
 
-// likeButton.addEventListener("click", () => {
-//   if (token) {
-//     fetch(`${apiUrl}/posts/likes/:postId`, {
-//       method: "POST",
-//       headers: {
-//         authorization: token,
-//       },
-//       body: JSON.stringify({
-//         userId,
-//         postId,
-//       }),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {})
-//       .catch((err) => {
-//         alert("Error updating like count");
-//         console.log(err);
-//       });
-//   }
-// });
-
 let cardData = [];
 
 createPostButton.addEventListener("click", () => {
@@ -64,14 +43,13 @@ const likesCount = (postId) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
-      // console.log(cardData);
+    
       if (data.newLikes) {
         for (let i = 0; i < cardData.length; i++) {
           if (cardData[i].postId === postId) {
-            console.log(cardData[i]);
+         
             cardData[i].likes = data.newLikes;
-            console.log(cardData);
+            
             createPosts([...cardData]);
             break;
           }
@@ -82,7 +60,6 @@ const likesCount = (postId) => {
     })
     .catch((err) => {
       alert("There was an error in log in, please retry");
-      console.log(err);
     });
 };
 
@@ -92,7 +69,6 @@ const createPosts = (array) => {
 
   array.forEach((cardObj) => {
     const { name, content, image, likes } = cardObj;
-    console.log(cardObj);
 
     const id = cardObj.postId;
 
@@ -113,7 +89,6 @@ const createPosts = (array) => {
     const likeButton = card.querySelector(".icon");
     likeButton.addEventListener("click", () => {
       likesCount(id);
-      // console.log(id);
     });
 
     
@@ -134,13 +109,12 @@ window.addEventListener("load", () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         cardData = data.data;
         createPosts(data.data);
       })
       .catch((err) => {
         alert("Error fetching data");
-        console.log(err);
+
       });
       fetch(`${apiUrl}/auth/getuser`, {
         method: "GET",
@@ -154,7 +128,7 @@ window.addEventListener("load", () => {
         })
         .catch((err) => {
           alert("Error Fetching data");
-          console.log(err);
+      
         });
   }
 });

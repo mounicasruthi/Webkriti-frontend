@@ -47,34 +47,9 @@ form.addEventListener("submit", (e) => {
     
   })
   .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
+  .then(data => {})
+  .catch(err => {});
 })
-
-
-// createButton.addEventListener("", () => {
-
-
-//   if (token) {    
-//     fetch(`${apiUrl}/posts/create`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         authorization: token,
-//       },
-//       body: JSON.stringify({ content, image }),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         if (data.message) {
-//           location.href = "/feed/feed.html";
-//         }
-//       })
-//       .catch((err) => {
-//         alert("Could not post. Retry.");
-//         console.log(err);
-//       });
-// };
 
 
 

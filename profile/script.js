@@ -51,14 +51,13 @@ const likesCount = (postId) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
-      // console.log(cardData);
+     
       if (data.newLikes) {
         for (let i = 0; i < cardData.length; i++) {
           if (cardData[i].postId === postId) {
-            console.log(cardData[i]);
+          
             cardData[i].likes = data.newLikes;
-            console.log(cardData);
+         
             createPosts([...cardData]);
             break;
           }
@@ -69,7 +68,7 @@ const likesCount = (postId) => {
     })
     .catch((err) => {
       alert("There was an error in log in, please retry");
-      console.log(err);
+    
     });
 };
 
@@ -82,7 +81,7 @@ const createPosts = (array) => {
     const { name, content, image, likes } = cardObj;
 
     const id = cardObj.postId;
-    console.log(id);
+    
 
     const card = document.createElement("div");
     card.classList.add("card");
@@ -97,13 +96,13 @@ const createPosts = (array) => {
     const likeButton = card.querySelector(".icon");
     likeButton.addEventListener("click", () => {
       likesCount(id);
-      // console.log(id);
+     
     });
 
     const updateButton = card.querySelector(".updateicon");
     updateButton.addEventListener("click", () => {
       location.href = `/update/update.html?postId=${id}`;
-      // console.log(id);
+ 
       
     });
 
@@ -130,7 +129,7 @@ window.addEventListener("load", () => {
       })
       .catch((err) => {
         alert("Error Fetching data");
-        console.log(err);
+    
       });
     fetch(`${apiUrl}/auth/getuser`, {
       method: "GET",
@@ -148,7 +147,7 @@ window.addEventListener("load", () => {
       })
       .catch((err) => {
         alert("Error Fetching data");
-        console.log(err);
+        
       });
   }
 });

@@ -48,13 +48,13 @@ updateButton.addEventListener("click", () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          // console.log("okay");
+         
           location.href = "/profile/profile.html";
         }
       })
       .catch((err) => {
         alert("Could not update post. Please try again.");
-        console.log(err);
+       
       });
   }
 });
@@ -77,7 +77,7 @@ deleteButton.addEventListener("click", () => {
       })
       .catch((err) => {
         alert("Could not delete post. Please try again.");
-        console.log(err);
+       
       });
   }
 });
